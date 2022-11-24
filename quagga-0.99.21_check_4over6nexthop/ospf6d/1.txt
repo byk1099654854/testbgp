@@ -1,0 +1,455 @@
+make[1]: Entering directory `/root/wjh/1218/quagga-0.99.21'
+make[1]: Leaving directory `/root/wjh/1218/quagga-0.99.21'
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_message.o -MD -MP -MF .deps/ospf6_message.Tpo -c -o ospf6_message.o ospf6_message.c
+ospf6_message.c:593:5: warning: no previous prototype for ‘ospf6_dbdesc_send_newone_for_leaving_to_exchange’ [-Wmissing-prototypes]
+ int ospf6_dbdesc_send_newone_for_leaving_to_exchange (struct thread *thread)
+     ^
+ospf6_message.c: In function ‘ospf6_compare_lsa_prerfix_2’:
+ospf6_message.c:2341:4: warning: passing argument 1 of ‘ipv6_prefix_equal’ from incompatible pointer type [enabled by default]
+    if (ipv6_prefix_equal (&in6_in_lsdb, &in6, current->prefix_length) == 1)
+    ^
+ospf6_message.c:2279:19: note: expected ‘const struct in6_addr *’ but argument is of type ‘struct in6_addr **’
+ static inline int ipv6_prefix_equal (const struct in6_addr *a1, const struct in6_addr *a2, unsigned int prefixlen)
+                   ^
+ospf6_message.c:2327:11: warning: unused variable ‘req_num_pfxs’ [-Wunused-variable]
+  uint32_t req_num_pfxs = ntohs (intra_prefix_lsa->prefix_num);
+           ^
+ospf6_message.c: In function ‘ospf6_lsa_get_internal’:
+ospf6_message.c:2392:6: warning: variable ‘ret’ set but not used [-Wunused-but-set-variable]
+  int ret;
+      ^
+ospf6_message.c: At top level:
+ospf6_message.c:2413:5: warning: no previous prototype for ‘ospf6_lsdb_get_prefix’ [-Wmissing-prototypes]
+ int ospf6_lsdb_get_prefix (int level, u_int16_t * type, struct ospf6_lsdb *lsdb, struct ospf6_lsa_header *lsah)
+     ^
+ospf6_message.c:577:13: warning: ‘ospf6_print_dbdesc’ defined but not used [-Wunused-function]
+ static void ospf6_print_dbdesc(struct ospf6_dbdesc *dbdesc)
+             ^
+ospf6_message.c:2433:12: warning: ‘ospf6_find_lsa_prefix_in_lsdb’ defined but not used [-Wunused-function]
+ static int ospf6_find_lsa_prefix_in_lsdb (struct ospf6_lsa_header *lsah)
+            ^
+mv -f .deps/ospf6_message.Tpo .deps/ospf6_message.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_lsa.o -MD -MP -MF .deps/ospf6_lsa.Tpo -c -o ospf6_lsa.o ospf6_lsa.c
+mv -f .deps/ospf6_lsa.Tpo .deps/ospf6_lsa.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_top.o -MD -MP -MF .deps/ospf6_top.Tpo -c -o ospf6_top.o ospf6_top.c
+In file included from ospf6_top.c:34:0:
+ospf6_message.h:218:78: warning: ‘struct ospf6_lsa’ declared inside parameter list [enabled by default]
+ extern int ospf6_check_lsa_maxage_prefix (struct ospf6_interface *oi, struct ospf6_lsa *lsa);
+                                                                              ^
+ospf6_message.h:218:78: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+ospf6_message.h:219:47: warning: ‘struct ospf6_lsa_header’ declared inside parameter list [enabled by default]
+ extern int ospf6_print_lsa_header_type(struct ospf6_lsa_header *lsah);
+                                               ^
+ospf6_top.c: In function ‘ospf6_top_route_hook_add’:
+ospf6_top.c:94:5: warning: implicit declaration of function ‘ospf6_print_one_route_to_huawei’ [-Wimplicit-function-declaration]
+     ospf6_print_one_route_to_huawei(route);
+     ^
+ospf6_top.c: In function ‘ospf6_top_brouter_hook_add’:
+ospf6_top.c:110:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ospf6_abr_examin_brouter (ADV_ROUTER_IN_PREFIX (&route->prefix));
+   ^
+ospf6_top.c: In function ‘ospf6_top_brouter_hook_remove’:
+ospf6_top.c:118:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ospf6_abr_examin_brouter (ADV_ROUTER_IN_PREFIX (&route->prefix));
+   ^
+ospf6_top.c: In function ‘ospf6_router_id1’:
+ospf6_top.c:339:13: warning: unused variable ‘router_id’ [-Wunused-variable]
+   u_int32_t router_id;
+             ^
+ospf6_top.c:338:7: warning: unused variable ‘ret’ [-Wunused-variable]
+   int ret;
+       ^
+ospf6_top.c: In function ‘no_ospf6_interface_area’:
+ospf6_top.c:448:17: warning: variable ‘o’ set but not used [-Wunused-but-set-variable]
+   struct ospf6 *o;
+                 ^
+ospf6_top.c: At top level:
+ospf6_top.c:962:1: warning: no previous prototype for ‘ospf6_print_one_route_to_huawei’ [-Wmissing-prototypes]
+ ospf6_print_one_route_to_huawei(struct ospf6_route *route)
+ ^
+ospf6_top.c: In function ‘ospf6_lsa_twod_lookup’:
+ospf6_top.c:1082:5: warning: passing argument 1 of ‘prefix2str’ from incompatible pointer type [enabled by default]
+     prefix2str(pdst, dst, sizeof(dst));//zlw
+     ^
+In file included from ospf6_top.c:28:0:
+../lib/prefix.h:144:12: note: expected ‘const struct prefix *’ but argument is of type ‘struct prefix_ipv6 *’
+ extern int prefix2str (const struct prefix *, char *, int);
+            ^
+ospf6_top.c:1083:5: warning: passing argument 1 of ‘prefix2str’ from incompatible pointer type [enabled by default]
+     prefix2str(psrc, src, sizeof(src));//zlw
+     ^
+In file included from ospf6_top.c:28:0:
+../lib/prefix.h:144:12: note: expected ‘const struct prefix *’ but argument is of type ‘struct prefix_ipv6 *’
+ extern int prefix2str (const struct prefix *, char *, int);
+            ^
+ospf6_top.c:1091:5: warning: passing argument 1 of ‘prefix2str’ from incompatible pointer type [enabled by default]
+     prefix2str(&olt->dst_pre, dst2, sizeof(dst));//zlw
+     ^
+In file included from ospf6_top.c:28:0:
+../lib/prefix.h:144:12: note: expected ‘const struct prefix *’ but argument is of type ‘struct prefix_ipv6 *’
+ extern int prefix2str (const struct prefix *, char *, int);
+            ^
+ospf6_top.c:1092:5: warning: passing argument 1 of ‘prefix2str’ from incompatible pointer type [enabled by default]
+     prefix2str(&olt->src_pre, src2, sizeof(src));//zlw
+     ^
+In file included from ospf6_top.c:28:0:
+../lib/prefix.h:144:12: note: expected ‘const struct prefix *’ but argument is of type ‘struct prefix_ipv6 *’
+ extern int prefix2str (const struct prefix *, char *, int);
+            ^
+ospf6_top.c: In function ‘ospf6_lsa_twod_lookup_cost’:
+ospf6_top.c:1121:5: warning: passing argument 1 of ‘prefix2str’ from incompatible pointer type [enabled by default]
+     prefix2str(pdst, dst, sizeof(dst));//zlw
+     ^
+In file included from ospf6_top.c:28:0:
+../lib/prefix.h:144:12: note: expected ‘const struct prefix *’ but argument is of type ‘struct prefix_ipv6 *’
+ extern int prefix2str (const struct prefix *, char *, int);
+            ^
+ospf6_top.c:1122:5: warning: passing argument 1 of ‘prefix2str’ from incompatible pointer type [enabled by default]
+     prefix2str(psrc, src, sizeof(src));//zlw
+     ^
+In file included from ospf6_top.c:28:0:
+../lib/prefix.h:144:12: note: expected ‘const struct prefix *’ but argument is of type ‘struct prefix_ipv6 *’
+ extern int prefix2str (const struct prefix *, char *, int);
+            ^
+ospf6_top.c:1130:5: warning: passing argument 1 of ‘prefix2str’ from incompatible pointer type [enabled by default]
+     prefix2str(&olt->dst_pre, dst2, sizeof(dst));//zlw
+     ^
+In file included from ospf6_top.c:28:0:
+../lib/prefix.h:144:12: note: expected ‘const struct prefix *’ but argument is of type ‘struct prefix_ipv6 *’
+ extern int prefix2str (const struct prefix *, char *, int);
+            ^
+ospf6_top.c:1131:5: warning: passing argument 1 of ‘prefix2str’ from incompatible pointer type [enabled by default]
+     prefix2str(&olt->src_pre, src2, sizeof(src));//zlw
+     ^
+In file included from ospf6_top.c:28:0:
+../lib/prefix.h:144:12: note: expected ‘const struct prefix *’ but argument is of type ‘struct prefix_ipv6 *’
+ extern int prefix2str (const struct prefix *, char *, int);
+            ^
+ospf6_top.c: At top level:
+ospf6_top.c:1146:1: warning: no previous prototype for ‘ospf6_lsa_twod_del_node’ [-Wmissing-prototypes]
+ ospf6_lsa_twod_del_node(struct ospf6_area *oa ,struct ospf6_lsa_twod **twod)
+ ^
+ospf6_top.c: In function ‘ospf6_lsa_twod_create’:
+ospf6_top.c:1174:28: warning: unused variable ‘node’ [-Wunused-variable]
+     struct listnode       *node = NULL;     //链表的移动节点
+                            ^
+ospf6_top.c: In function ‘ospf6_twod_cost_addr_prefix’:
+ospf6_top.c:1287:9: warning: variable ‘rtn_val’ set but not used [-Wunused-but-set-variable]
+     int rtn_val = 0;
+         ^
+ospf6_top.c: In function ‘ospf6_twod_route_add_xml’:
+ospf6_top.c:1340:5: warning: unused variable ‘fd’ [-Wunused-variable]
+ int fd;
+     ^
+ospf6_top.c: In function ‘ospf6_twod_route_del_xml’:
+ospf6_top.c:1361:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(i=0;i<twod_colcu;i++)
+           ^
+ospf6_top.c:1367:15: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for(j=i+1;j<twod_colcu;j++)
+               ^
+ospf6_top.c:1360:17: warning: unused variable ‘cov’ [-Wunused-variable]
+         int j=0,cov;
+                 ^
+ospf6_top.c: In function ‘ospf6_twod_dst_prefix_src_prefix_cost’:
+ospf6_top.c:1398:5: warning: passing argument 3 of ‘ospf6_twod_cost_addr_prefix’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     return ospf6_twod_cost_addr_prefix(vty,1,argv[0],argv[1],atoi(argv[2]));
+     ^
+ospf6_top.c:1280:1: note: expected ‘char *’ but argument is of type ‘const char *’
+ ospf6_twod_cost_addr_prefix(struct vty *vty,int flag,
+ ^
+ospf6_top.c:1398:5: warning: passing argument 4 of ‘ospf6_twod_cost_addr_prefix’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     return ospf6_twod_cost_addr_prefix(vty,1,argv[0],argv[1],atoi(argv[2]));
+     ^
+ospf6_top.c:1280:1: note: expected ‘char *’ but argument is of type ‘const char *’
+ ospf6_twod_cost_addr_prefix(struct vty *vty,int flag,
+ ^
+ospf6_top.c: In function ‘no_ospf6_twod_dst_prefix_src_prefix_cost’:
+ospf6_top.c:1413:5: warning: passing argument 3 of ‘ospf6_twod_cost_addr_prefix’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     return ospf6_twod_cost_addr_prefix(vty,0,argv[0],argv[1],atoi(argv[2]));
+     ^
+ospf6_top.c:1280:1: note: expected ‘char *’ but argument is of type ‘const char *’
+ ospf6_twod_cost_addr_prefix(struct vty *vty,int flag,
+ ^
+ospf6_top.c:1413:5: warning: passing argument 4 of ‘ospf6_twod_cost_addr_prefix’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     return ospf6_twod_cost_addr_prefix(vty,0,argv[0],argv[1],atoi(argv[2]));
+     ^
+ospf6_top.c:1280:1: note: expected ‘char *’ but argument is of type ‘const char *’
+ ospf6_twod_cost_addr_prefix(struct vty *vty,int flag,
+ ^
+ospf6_top.c: In function ‘ospf6_twod_route_del_xml’:
+ospf6_top.c:1384:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+mv -f .deps/ospf6_top.Tpo .deps/ospf6_top.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_interface.o -MD -MP -MF .deps/ospf6_interface.Tpo -c -o ospf6_interface.o ospf6_interface.c
+In file included from ospf6_interface.c:25:0:
+../lib/if.h:322:43: warning: ‘struct vty’ declared inside parameter list [enabled by default]
+ int send_interface_up_down_to_dpdk(struct vty *vty,char *ifname,uint8_t status);
+                                           ^
+../lib/if.h:322:43: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+mv -f .deps/ospf6_interface.Tpo .deps/ospf6_interface.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_neighbor.o -MD -MP -MF .deps/ospf6_neighbor.Tpo -c -o ospf6_neighbor.o ospf6_neighbor.c
+ospf6_neighbor.c:265:12: warning: ‘ospf6_fill_update_list’ defined but not used [-Wunused-function]
+ static int ospf6_fill_update_list(struct ospf6_neighbor *on)
+            ^
+mv -f .deps/ospf6_neighbor.Tpo .deps/ospf6_neighbor.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_flood.o -MD -MP -MF .deps/ospf6_flood.Tpo -c -o ospf6_flood.o ospf6_flood.c
+In file included from ../zebra/zserv.h:25:0,
+                 from ospf6_flood.c:34:
+../zebra/rib.h:338:35: warning: ‘struct thread’ declared inside parameter list [enabled by default]
+ zebra_4over6_nexthop_check(struct thread *thread);
+                                   ^
+../zebra/rib.h:338:35: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from ../zebra/zserv.h:26:0,
+                 from ospf6_flood.c:34:
+../lib/if.h:322:43: warning: ‘struct vty’ declared inside parameter list [enabled by default]
+ int send_interface_up_down_to_dpdk(struct vty *vty,char *ifname,uint8_t status);
+                                           ^
+ospf6_flood.c:815:5: warning: no previous prototype for ‘remove_xml_twod_lsa’ [-Wmissing-prototypes]
+ int remove_xml_twod_lsa (struct ospf6_lsa *lsa)
+     ^
+ospf6_flood.c: In function ‘remove_xml_twod_lsa’:
+ospf6_flood.c:855:12: warning: implicit declaration of function ‘creat_rout_two_tb’ [-Wimplicit-function-declaration]
+            creat_rout_two_tb(&s_in6,addr_source->tlv_length,
+            ^
+ospf6_flood.c: In function ‘remove_intra_lsa’:
+ospf6_flood.c:877:7: warning: unused variable ‘rtn’ [-Wunused-variable]
+   int rtn = 0;
+       ^
+mv -f .deps/ospf6_flood.Tpo .deps/ospf6_flood.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_intra.o -MD -MP -MF .deps/ospf6_intra.Tpo -c -o ospf6_intra.o ospf6_intra.c
+In file included from ospf6_intra.c:38:0:
+../lib/if.h:322:43: warning: ‘struct vty’ declared inside parameter list [enabled by default]
+ int send_interface_up_down_to_dpdk(struct vty *vty,char *ifname,uint8_t status);
+                                           ^
+../lib/if.h:322:43: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+In file included from ospf6_intra.c:48:0:
+ospf6_message.h:218:78: warning: ‘struct ospf6_lsa’ declared inside parameter list [enabled by default]
+ extern int ospf6_check_lsa_maxage_prefix (struct ospf6_interface *oi, struct ospf6_lsa *lsa);
+                                                                              ^
+ospf6_message.h:219:47: warning: ‘struct ospf6_lsa_header’ declared inside parameter list [enabled by default]
+ extern int ospf6_print_lsa_header_type(struct ospf6_lsa_header *lsah);
+                                               ^
+ospf6_intra.c: In function ‘ospf6_extend_intra_prefix_lsa_originate_stub’:
+ospf6_intra.c:895:2: warning: implicit declaration of function ‘ospf6_lsa_twod_del_node’ [-Wimplicit-function-declaration]
+  ospf6_lsa_twod_del_node (oa, &twod); //zlw 2016-4-7 å¥½å¥½çœ‹çœ‹è¿™é‡Œï¼Œç”¨returnå°±ä¸è¡?
+  ^
+ospf6_intra.c:862:28: warning: unused variable ‘route_advertise’ [-Wunused-variable]
+  struct ospf6_route_table *route_advertise;
+                            ^
+ospf6_intra.c:861:7: warning: unused variable ‘buf’ [-Wunused-variable]
+  char buf[BUFSIZ];
+       ^
+ospf6_intra.c:859:6: warning: unused variable ‘full_count’ [-Wunused-variable]
+  int full_count = 0;
+      ^
+ospf6_intra.c:858:23: warning: unused variable ‘j’ [-Wunused-variable]
+  struct listnode *i, *j;
+                       ^
+ospf6_intra.c:858:19: warning: unused variable ‘i’ [-Wunused-variable]
+  struct listnode *i, *j;
+                   ^
+ospf6_intra.c:856:22: warning: unused variable ‘route’ [-Wunused-variable]
+  struct ospf6_route *route;
+                      ^
+ospf6_intra.c:855:25: warning: unused variable ‘on’ [-Wunused-variable]
+  struct ospf6_neighbor *on;
+                         ^
+ospf6_intra.c:854:26: warning: unused variable ‘oi’ [-Wunused-variable]
+  struct ospf6_interface *oi;
+                          ^
+ospf6_intra.c: At top level:
+ospf6_intra.c:1269:6: warning: no previous prototype for ‘ospf6_intra_prefix_lsa_add_e’ [-Wmissing-prototypes]
+ void ospf6_intra_prefix_lsa_add_e (struct ospf6_lsa *lsa, struct ospf6_route_table *route_table1)
+      ^
+ospf6_intra.c: In function ‘ospf6_intra_prefix_lsa_add_e’:
+ospf6_intra.c:1283:12: warning: unused variable ‘type’ [-Wunused-variable]
+  u_int16_t type;
+            ^
+ospf6_intra.c:1282:8: warning: unused variable ‘des_p’ [-Wunused-variable]
+  char *des_p;
+        ^
+ospf6_intra.c:1280:23: warning: unused variable ‘op_e’ [-Wunused-variable]
+  struct ospf6_prefix *op_e;
+                       ^
+ospf6_intra.c:1275:27: warning: unused variable ‘lsa_header_e’ [-Wunused-variable]
+  struct ospf6_lsa_header *lsa_header_e;
+                           ^
+ospf6_intra.c:1274:33: warning: unused variable ‘intra_prefix_lsa_e’ [-Wunused-variable]
+  struct ospf6_intra_prefix_lsa *intra_prefix_lsa_e;
+                                 ^
+ospf6_intra.c:1272:20: warning: unused variable ‘lsa_e’ [-Wunused-variable]
+  struct ospf6_lsa *lsa_e = NULL;
+                    ^
+ospf6_intra.c: At top level:
+ospf6_intra.c:1569:1: warning: no previous prototype for ‘ospf6_build_acl_message’ [-Wmissing-prototypes]
+ ospf6_build_acl_message(struct ospf6_acl_message *p_ospf6_acl, 
+ ^
+ospf6_intra.c:1701:1: warning: no previous prototype for ‘ospf_client_connect’ [-Wmissing-prototypes]
+ ospf_client_connect(struct ospf_acl_message* p_ospf,int size)
+ ^
+ospf6_intra.c: In function ‘ospf_client_connect’:
+ospf6_intra.c:1717:56: warning: passing argument 2 of ‘connect’ from incompatible pointer type [enabled by default]
+  ret = connect( ospf_sock,&socketaddress,sizeof(struct sockaddr) );
+                                                        ^
+In file included from /usr/include/netinet/in.h:23:0,
+                 from /usr/include/arpa/inet.h:22,
+                 from ospf6_intra.c:25:
+/usr/include/x86_64-linux-gnu/sys/socket.h:137:12: note: expected ‘const struct sockaddr *’ but argument is of type ‘struct sockaddr_in *’
+ extern int connect (int __fd, __CONST_SOCKADDR_ARG __addr, socklen_t __len);
+            ^
+ospf6_intra.c: At top level:
+ospf6_intra.c:1747:5: warning: no previous prototype for ‘interface_to_int’ [-Wmissing-prototypes]
+ int interface_to_int(char *pstr)
+     ^
+ospf6_intra.c: In function ‘ospf6_send_del_acl_msg’:
+ospf6_intra.c:1806:9: warning: unused variable ‘fwd’ [-Wunused-variable]
+     int fwd = 0;
+         ^
+ospf6_intra.c: At top level:
+ospf6_intra.c:1830:5: warning: no previous prototype for ‘str_at’ [-Wmissing-prototypes]
+ int str_at(char *input,char *ip_addr,int *length)
+     ^
+ospf6_intra.c:1858:5: warning: no previous prototype for ‘send_route_msg_kernel’ [-Wmissing-prototypes]
+ int send_route_msg_kernel (int msg_count, int handl_flag)
+     ^
+ospf6_intra.c:1928:6: warning: no previous prototype for ‘creat_rout_two_tb’ [-Wmissing-prototypes]
+ void creat_rout_two_tb (struct in6_addr *src, unsigned char src_len, struct in6_addr *dst, unsigned char dst_len, struct in6_addr *next_hop, int ifindex, struct dmesion2_ctrl_msg *rout_dmesion)
+      ^
+ospf6_intra.c:1963:1: warning: no previous prototype for ‘ospf6_intra_route_calculation_e’ [-Wmissing-prototypes]
+ ospf6_intra_route_calculation_e(struct ospf6_area *oa,struct ospf6_route_table *route_table1)
+ ^
+ospf6_intra.c: In function ‘ospf6_intra_route_calculation_e’:
+ospf6_intra.c:2057:14: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+        ifiret=ifindex2ifname(route->nexthop[i].ifindex);
+              ^
+ospf6_intra.c:2086:51: warning: passing argument 3 of ‘ospf6_twod_route_add_xml’ discards ‘const’ qualifier from pointer target type [enabled by default]
+                                                   buf);//flag  
+                                                   ^
+In file included from ospf6_intra.c:53:0:
+ospf6_top.h:102:12: note: expected ‘char *’ but argument is of type ‘const char *’
+ extern int ospf6_twod_route_add_xml(char *pDst,char *pSrc,char *pOut_if,char *pFlag,char *pNext_hop);
+            ^
+ospf6_intra.c:2086:51: warning: passing argument 4 of ‘ospf6_twod_route_add_xml’ discards ‘const’ qualifier from pointer target type [enabled by default]
+                                                   buf);//flag  
+                                                   ^
+In file included from ospf6_intra.c:53:0:
+ospf6_top.h:102:12: note: expected ‘char *’ but argument is of type ‘const char *’
+ extern int ospf6_twod_route_add_xml(char *pDst,char *pSrc,char *pOut_if,char *pFlag,char *pNext_hop);
+            ^
+ospf6_intra.c:1980:27: warning: unused variable ‘src_addr’ [-Wunused-variable]
+  struct in6_addr dst_addr,src_addr;
+                           ^
+ospf6_intra.c:1980:18: warning: unused variable ‘dst_addr’ [-Wunused-variable]
+  struct in6_addr dst_addr,src_addr;
+                  ^
+ospf6_intra.c:1979:14: warning: unused variable ‘src_len’ [-Wunused-variable]
+  int dst_len,src_len;
+              ^
+ospf6_intra.c:1979:6: warning: unused variable ‘dst_len’ [-Wunused-variable]
+  int dst_len,src_len;
+      ^
+ospf6_intra.c:1978:19: warning: unused variable ‘src_str’ [-Wunused-variable]
+  char dst_str[16],src_str[16];
+                   ^
+ospf6_intra.c:1978:7: warning: unused variable ‘dst_str’ [-Wunused-variable]
+  char dst_str[16],src_str[16];
+       ^
+ospf6_intra.c:1976:10: warning: unused variable ‘buf’ [-Wunused-variable]
+     char buf[64];//zlw 
+          ^
+ospf6_intra.c:1973:10: warning: unused variable ‘next_hop_add’ [-Wunused-variable]
+     char next_hop_add[48];//zlw
+          ^
+ospf6_intra.c:1972:10: warning: unused variable ‘out_if’ [-Wunused-variable]
+     char out_if[20];//zlw
+          ^
+ospf6_intra.c: In function ‘ospf6_brouter_debug_print’:
+ospf6_intra.c:2113:2: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  brouter_id = ADV_ROUTER_IN_PREFIX (&brouter->prefix);
+  ^
+ospf6_intra.c: In function ‘ospf6_intra_brouter_calculation’:
+ospf6_intra.c:2161:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   brouter_id = ADV_ROUTER_IN_PREFIX (&brouter->prefix);
+   ^
+ospf6_intra.c:2176:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   brouter_id = ADV_ROUTER_IN_PREFIX (&brouter->prefix);
+   ^
+ospf6_intra.c:2181:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   if (ospf6_linkstate_prefix_id (&brouter->prefix) != htonl (0))
+   ^
+ospf6_intra.c:2203:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   brouter_id = ADV_ROUTER_IN_PREFIX (&brouter->prefix);
+   ^
+ospf6_intra.c: In function ‘ospf6_build_acl_message’:
+ospf6_intra.c:1697:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+ospf6_intra.c: In function ‘interface_to_int’:
+ospf6_intra.c:1761:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+ospf6_intra.c: In function ‘str_at’:
+ospf6_intra.c:1851:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+mv -f .deps/ospf6_intra.Tpo .deps/ospf6_intra.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_asbr.o -MD -MP -MF .deps/ospf6_asbr.Tpo -c -o ospf6_asbr.o ospf6_asbr.c
+ospf6_asbr.c: In function ‘ospf6_as_external_lsa_originate’:
+ospf6_asbr.c:61:21: warning: variable ‘old’ set but not used [-Wunused-but-set-variable]
+   struct ospf6_lsa *old, *lsa;
+                     ^
+ospf6_asbr.c: In function ‘ospf6_asbr_lsentry_add’:
+ospf6_asbr.c:305:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       inet_ntop (AF_INET, &ADV_ROUTER_IN_PREFIX (&asbr_entry->prefix),
+       ^
+ospf6_asbr.c:312:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   router = ospf6_linkstate_prefix_adv_router (&asbr_entry->prefix);
+   ^
+ospf6_asbr.c: In function ‘ospf6_asbr_lsentry_remove’:
+ospf6_asbr.c:329:3: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   router = ospf6_linkstate_prefix_adv_router (&asbr_entry->prefix);
+   ^
+mv -f .deps/ospf6_asbr.Tpo .deps/ospf6_asbr.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_abr.o -MD -MP -MF .deps/ospf6_abr.Tpo -c -o ospf6_abr.o ospf6_abr.c
+ospf6_abr.c: In function ‘ospf6_abr_originate_summary_to_area’:
+ospf6_abr.c:165:11: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+           inet_ntop (AF_INET, &(ADV_ROUTER_IN_PREFIX (&route->prefix)),
+           ^
+ospf6_abr.c:358:17: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+                 inet_ntop (AF_INET, &(ADV_ROUTER_IN_PREFIX (&route->prefix)),
+                 ^
+ospf6_abr.c:379:18: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+                  inet_ntop (AF_INET, &(ADV_ROUTER_IN_PREFIX (&route->prefix)),
+                  ^
+ospf6_abr.c:433:7: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       router_lsa->router_id = ADV_ROUTER_IN_PREFIX (&route->prefix);
+       ^
+mv -f .deps/ospf6_abr.Tpo .deps/ospf6_abr.Po
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6d.o -MD -MP -MF .deps/ospf6d.Tpo -c -o ospf6d.o ospf6d.c
+mv -f .deps/ospf6d.Tpo .deps/ospf6d.Po
+rm -f libospf6.a
+ar cru libospf6.a ospf6_network.o ospf6_message.o ospf6_lsa.o ospf6_lsdb.o ospf6_top.o ospf6_area.o ospf6_interface.o ospf6_neighbor.o ospf6_flood.o ospf6_route.o ospf6_intra.o ospf6_zebra.o ospf6_spf.o ospf6_proto.o ospf6_asbr.o ospf6_abr.o ospf6_snmp.o ospf6d.o 
+ranlib libospf6.a
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT ospf6_main.o -MD -MP -MF .deps/ospf6_main.Tpo -c -o ospf6_main.o ospf6_main.c
+In file included from ospf6_main.c:41:0:
+ospf6_message.h:218:78: warning: ‘struct ospf6_lsa’ declared inside parameter list [enabled by default]
+ extern int ospf6_check_lsa_maxage_prefix (struct ospf6_interface *oi, struct ospf6_lsa *lsa);
+                                                                              ^
+ospf6_message.h:218:78: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+ospf6_message.h:219:47: warning: ‘struct ospf6_lsa_header’ declared inside parameter list [enabled by default]
+ extern int ospf6_print_lsa_header_type(struct ospf6_lsa_header *lsah);
+                                               ^
+ospf6_main.c: In function ‘update_neighbor_period’:
+ospf6_main.c:282:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             if (ifindex_array[j] == ifindex)
+                                  ^
+ospf6_main.c: In function ‘insert_connection_period_msg_to_list’:
+ospf6_main.c:413:5: warning: ' ' flag used with ‘%c’ gnu_printf format [-Wformat=]
+     zlog_debug(">>>>>>>>>>..start time or end time or connection period don't same  in p, update p, now st:%f et:% ct:%f", p->stl_msg_all.start_time, p->stl_msg_all.end_time, p->stl_msg_all.connection_period);
+     ^
+ospf6_main.c:413:5: warning: format ‘%c’ expects argument of type ‘int’, but argument 3 has type ‘double’ [-Wformat=]
+mv -f .deps/ospf6_main.Tpo .deps/ospf6_main.Po
+/bin/bash ../libtool --tag=CC   --mode=link gcc -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -pie -lpthread  -o ospf6d ospf6_main.o ospf6_network.o ospf6_message.o ospf6_lsa.o ospf6_lsdb.o ospf6_top.o ospf6_area.o ospf6_interface.o ospf6_neighbor.o ospf6_flood.o ospf6_route.o ospf6_intra.o ospf6_zebra.o ospf6_spf.o ospf6_proto.o ospf6_asbr.o ospf6_abr.o ospf6_snmp.o ospf6d.o ../lib/libzebra.la  -lcrypt   -lrt
+libtool: link: gcc -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -pie -o .libs/ospf6d ospf6_main.o ospf6_network.o ospf6_message.o ospf6_lsa.o ospf6_lsdb.o ospf6_top.o ospf6_area.o ospf6_interface.o ospf6_neighbor.o ospf6_flood.o ospf6_route.o ospf6_intra.o ospf6_zebra.o ospf6_spf.o ospf6_proto.o ospf6_asbr.o ospf6_abr.o ospf6_snmp.o ospf6d.o  -lpthread ../lib/.libs/libzebra.so -lcrypt -lrt

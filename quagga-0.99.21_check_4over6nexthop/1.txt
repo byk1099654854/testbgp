@@ -1,0 +1,1856 @@
+make  all-recursive
+make[1]: Entering directory `/root/dpdk_code_install/quagga-0.99.21_check_4over6nexthop'
+Making all in lib
+make[2]: Entering directory `/root/dpdk_code_install/quagga-0.99.21_check_4over6nexthop/lib'
+make  all-am
+make[3]: Entering directory `/root/dpdk_code_install/quagga-0.99.21_check_4over6nexthop/lib'
+make[3]: Nothing to be done for `all-am'.
+make[3]: Leaving directory `/root/dpdk_code_install/quagga-0.99.21_check_4over6nexthop/lib'
+make[2]: Leaving directory `/root/dpdk_code_install/quagga-0.99.21_check_4over6nexthop/lib'
+Making all in zebra
+make[2]: Entering directory `/root/dpdk_code_install/quagga-0.99.21_check_4over6nexthop/zebra'
+gcc -DHAVE_CONFIG_H -DSYSCONFDIR=\"/usr/local/etc/\" -DMULTIPATH_NUM=1 -I. -I.. -I.. -I.. -I../lib    -fPIE -Os -fno-omit-frame-pointer -g -std=gnu99 -Wall -Wsign-compare -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Wmissing-prototypes -Wmissing-declarations -Wchar-subscripts -Wcast-qual -MT zebra_vty.o -MD -MP -MF .deps/zebra_vty.Tpo -c -o zebra_vty.o zebra_vty.c
+In file included from zebra_vty.c:40:0:
+../bgpd/bgp_zebra.h:31:39: warning: ‘struct bgp’ declared inside parameter list [enabled by default]
+                                       safi_t, int *);
+                                       ^
+../bgpd/bgp_zebra.h:31:39: warning: its scope is only this definition or declaration, which is probably not what you want [enabled by default]
+../bgpd/bgp_zebra.h:33:9: warning: ‘struct bgp’ declared inside parameter list [enabled by default]
+         int *);
+         ^
+../bgpd/bgp_zebra.h:34:76: warning: ‘struct bgp’ declared inside parameter list [enabled by default]
+ extern void bgp_zebra_announce (struct prefix *, struct bgp_info *, struct bgp *, safi_t);
+                                                                            ^
+../bgpd/bgp_zebra.h:34:76: warning: ‘struct bgp_info’ declared inside parameter list [enabled by default]
+../bgpd/bgp_zebra.h:35:57: warning: ‘struct bgp_info’ declared inside parameter list [enabled by default]
+ extern void bgp_zebra_withdraw (struct prefix *, struct bgp_info *, safi_t);
+                                                         ^
+../bgpd/bgp_zebra.h:37:41: warning: ‘struct bgp’ declared inside parameter list [enabled by default]
+ extern int bgp_redistribute_set (struct bgp *, afi_t, int);
+                                         ^
+../bgpd/bgp_zebra.h:38:46: warning: ‘struct bgp’ declared inside parameter list [enabled by default]
+ extern int bgp_redistribute_rmap_set (struct bgp *, afi_t, int, const char *);
+                                              ^
+../bgpd/bgp_zebra.h:39:48: warning: ‘struct bgp’ declared inside parameter list [enabled by default]
+ extern int bgp_redistribute_metric_set (struct bgp *, afi_t, int, u_int32_t);
+                                                ^
+../bgpd/bgp_zebra.h:40:43: warning: ‘struct bgp’ declared inside parameter list [enabled by default]
+ extern int bgp_redistribute_unset (struct bgp *, afi_t, int);
+                                           ^
+../bgpd/bgp_zebra.h:41:52: warning: ‘struct bgp’ declared inside parameter list [enabled by default]
+ extern int bgp_redistribute_routemap_unset (struct bgp *, afi_t, int);
+                                                    ^
+../bgpd/bgp_zebra.h:42:50: warning: ‘struct bgp’ declared inside parameter list [enabled by default]
+ extern int bgp_redistribute_metric_unset (struct bgp *, afi_t, int);
+                                                  ^
+zebra_vty.c: In function ‘zebra_ipv4_customize’:
+zebra_vty.c:368:9: warning: implicit declaration of function ‘zebra_rib_delete_ipv4_customize’ [-Wimplicit-function-declaration]
+         zebra_rib_delete_ipv4_customize (routetablename, &p, &gate, ifname, 0);
+         ^
+zebra_vty.c:328:12: warning: unused variable ‘flag’ [-Wunused-variable]
+     u_char flag = 0;
+            ^
+zebra_vty.c: In function ‘zebra_static_ipv4_customize’:
+zebra_vty.c:421:13: warning: implicit declaration of function ‘static_add_ipv4_customize’ [-Wimplicit-function-declaration]
+             static_add_ipv4_customize (&p, NULL, NULL, ZEBRA_FLAG_BLACKHOLE, distance, 0);
+             ^
+zebra_vty.c:423:13: warning: implicit declaration of function ‘static_delete_ipv4_customize’ [-Wimplicit-function-declaration]
+             static_delete_ipv4_customize (&p, NULL, NULL, distance, 0);
+             ^
+zebra_vty.c: In function ‘zebra_static_ipv4_4over6’:
+zebra_vty.c:528:9: warning: implicit declaration of function ‘zebra_4over6_nexthop_add_check’ [-Wimplicit-function-declaration]
+         zebra_4over6_nexthop_add_check (gate, (struct prefix_ipv4 *)&p);
+         ^
+zebra_vty.c:529:9: warning: implicit declaration of function ‘zebra_4over6_nexthop_lookup’ [-Wimplicit-function-declaration]
+         ret = zebra_4over6_nexthop_lookup (&gate, tunnel_name);
+         ^
+zebra_vty.c:536:9: warning: implicit declaration of function ‘static_add_ipv4_4over6’ [-Wimplicit-function-declaration]
+         static_add_ipv4_4over6 (&p, type, &gate, ifname, flag, distance, 0);
+         ^
+zebra_vty.c:548:9: warning: implicit declaration of function ‘static_delete_ipv4_4over6’ [-Wimplicit-function-declaration]
+         static_delete_ipv4_4over6 (&p, type, &gate, ifname, distance, 0);
+         ^
+zebra_vty.c:550:9: warning: implicit declaration of function ‘zebra_4over6_nexthop_del_check’ [-Wimplicit-function-declaration]
+         zebra_4over6_nexthop_del_check (gate);
+         ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_add_pool’:
+zebra_vty.c:666:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (poolname, pool_name);
+     ^
+zebra_vty.c:658:40: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list_pool_entry *pLast;
+                                        ^
+zebra_vty.c: In function ‘ip_nat_pool_add’:
+zebra_vty.c:709:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (poolname, pool_name);
+     ^
+zebra_vty.c:710:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (startaddr, start_addr);
+     ^
+zebra_vty.c:711:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (endaddr, end_addr);
+     ^
+zebra_vty.c:758:9: warning: format not a string literal and no format arguments [-Wformat-security]
+         sprintf (pNew->startaddr, start_addr);
+         ^
+zebra_vty.c:759:9: warning: format not a string literal and no format arguments [-Wformat-security]
+         sprintf (pNew->endaddr, end_addr);
+         ^
+zebra_vty.c:766:13: warning: format not a string literal and no format arguments [-Wformat-security]
+             sprintf (pNew->poolcmdstr, start_addr);
+             ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_del_pool’:
+zebra_vty.c:788:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (poolname, pool_name);
+     ^
+zebra_vty.c:780:40: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list_pool_entry *pLast;
+                                        ^
+zebra_vty.c: In function ‘ip_nat_pool_del’:
+zebra_vty.c:820:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (poolname, pool_name);
+     ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_add_source_list’:
+zebra_vty.c:863:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (listname, list_name);
+     ^
+zebra_vty.c:855:40: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list_pool_entry *pLast;
+                                        ^
+zebra_vty.c: In function ‘ip_nat_source_list_add’:
+zebra_vty.c:898:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (listname, list_name);
+     ^
+zebra_vty.c:934:9: warning: format not a string literal and no format arguments [-Wformat-security]
+         sprintf (pNew->snet, net_str);
+         ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_del_source_list’:
+zebra_vty.c:957:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (listname, list_name);
+     ^
+zebra_vty.c:967:13: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+             if (pNext->pool_state = NAT_ENABLE)
+             ^
+zebra_vty.c:949:40: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list_pool_entry *pLast;
+                                        ^
+zebra_vty.c: In function ‘ip_nat_source_list_del’:
+zebra_vty.c:989:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (listname, list_name);
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:1027:5: warning: no previous prototype for ‘ip_nat_pool_lookup’ [-Wmissing-prototypes]
+ int ip_nat_pool_lookup (char *pool_name, struct nat_pool_entry *pool)
+     ^
+zebra_vty.c: In function ‘ip_nat_pool_lookup’:
+zebra_vty.c:1029:28: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_pool_entry *pLast;
+                            ^
+zebra_vty.c: At top level:
+zebra_vty.c:1053:5: warning: no previous prototype for ‘ip_nat_source_list_lookup’ [-Wmissing-prototypes]
+ int ip_nat_source_list_lookup (char *list_name, struct nat_source_list *source)
+     ^
+zebra_vty.c: In function ‘ip_nat_source_list_lookup’:
+zebra_vty.c:1055:29: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list *pLast;
+                             ^
+zebra_vty.c: In function ‘ip_nat_source_list_pool_add’:
+zebra_vty.c:1096:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (poolname, pool_name);
+     ^
+zebra_vty.c:1097:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (listname, list_name);
+     ^
+zebra_vty.c: In function ‘ip_nat_source_list_pool_del’:
+zebra_vty.c:1172:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (poolname, pool_name);
+     ^
+zebra_vty.c:1173:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     sprintf (listname, list_name);
+     ^
+zebra_vty.c:1164:9: warning: unused variable ‘ret’ [-Wunused-variable]
+     int ret = 0;
+         ^
+zebra_vty.c:1161:28: warning: unused variable ‘pool’ [-Wunused-variable]
+     struct nat_pool_entry *pool;
+                            ^
+zebra_vty.c:1160:29: warning: unused variable ‘sourcelist’ [-Wunused-variable]
+     struct nat_source_list *sourcelist;
+                             ^
+zebra_vty.c:1159:40: warning: unused variable ‘pNew’ [-Wunused-variable]
+     struct nat_source_list_pool_entry *pNew;
+                                        ^
+zebra_vty.c: At top level:
+zebra_vty.c:1854:5: warning: no previous prototype for ‘vtysh_show_dpdk_4over6_route’ [-Wmissing-prototypes]
+ int vtysh_show_dpdk_4over6_route (struct vty *vty)
+     ^
+zebra_vty.c: In function ‘vtysh_show_dpdk_4over6_route’:
+zebra_vty.c:1864:5: warning: implicit declaration of function ‘connect_dpdk’ [-Wimplicit-function-declaration]
+     sockfd = connect_dpdk (vty);
+     ^
+zebra_vty.c:1869:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &bgp_4over6_route_msg[0] = REQUEST_BGP_4OVER6_ROUTE;
+     ^
+zebra_vty.c:1870:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &bgp_4over6_route_msg[4] = htonl (8);
+     ^
+zebra_vty.c:1886:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     for (i = 0; i < n; i += ntohl (*(int *) &buf[i + 4]))
+     ^
+zebra_vty.c:1888:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (*(int *) &buf[i] == RESPONSE_BGP_4OVER6_ROUTE)
+         ^
+zebra_vty.c:1891:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+             memcpy (&ipv4overipv6_address, (char *) &buf[i] + 8, ntohl (*(int *) &buf[i + 4]) - 8);
+             ^
+zebra_vty.c: At top level:
+zebra_vty.c:2097:5: warning: no previous prototype for ‘zebra_connect_dpdk_send_route_lookup’ [-Wmissing-prototypes]
+ int zebra_connect_dpdk_send_route_lookup (struct vty *vty, struct zebra_config_message *msg_to_dpdk, int size)
+     ^
+zebra_vty.c: In function ‘zebra_connect_dpdk_send_route_lookup’:
+zebra_vty.c:2143:9: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+         vty_out(vty, "%s oif:%s gateway:%s forward:%d%s", msg_to_dpdk->data, dpdk_ifindex2ifname(route_info->next_hop), str, route_info->forward, VTY_NEWLINE);
+         ^
+zebra_vty.c:2157:17: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘void *’ [-Wformat=]
+                 str, (route_info->forward == 0) ? "input": ((route_info->forward == 1) ? "forward" : ((route_info->forward == 2) ? "4over6 encap" :"drop")), VTY_NEWLINE);
+                 ^
+zebra_vty.c: In function ‘show_ip_frt_route_addr’:
+zebra_vty.c:2190:22: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     msg_to_dpdk.data = argv[0];
+                      ^
+zebra_vty.c: In function ‘nat64_v4pool’:
+zebra_vty.c:2419:5: warning: implicit declaration of function ‘zebra_connect_dpdk_send_message_two’ [-Wimplicit-function-declaration]
+     if (-1 == zebra_connect_dpdk_send_message_two (p_zebra_msg, p_zebra_msg->len))
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:2662:5: warning: no previous prototype for ‘sendtoserver’ [-Wmissing-prototypes]
+ int sendtoserver (struct vty *vty, char buffer[1024])
+     ^
+zebra_vty.c:2726:6: warning: no previous prototype for ‘change_ipv4address’ [-Wmissing-prototypes]
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:2790:5: warning: no previous prototype for ‘compare_twoaddress’ [-Wmissing-prototypes]
+ int compare_twoaddress (char buf[], char buf2[]) //low address should be < high address
+     ^
+zebra_vty.c: In function ‘ip_dhcp_excluded_address’:
+zebra_vty.c:2938:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:2941:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:2953:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:2958:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[1];
+       ^
+zebra_vty.c:2961:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:2973:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:2977:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:2978:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[1]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:2979:5: warning: passing argument 1 of ‘compare_twoaddress’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     if (compare_twoaddress (argv[0], argv[1]) == -1) //address argv[1] should >= argv[0]
+     ^
+zebra_vty.c:2790:5: note: expected ‘char *’ but argument is of type ‘const char *’
+ int compare_twoaddress (char buf[], char buf2[]) //low address should be < high address
+     ^
+zebra_vty.c:2979:5: warning: passing argument 2 of ‘compare_twoaddress’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     if (compare_twoaddress (argv[0], argv[1]) == -1) //address argv[1] should >= argv[0]
+     ^
+zebra_vty.c:2790:5: note: expected ‘char *’ but argument is of type ‘const char *’
+ int compare_twoaddress (char buf[], char buf2[]) //low address should be < high address
+     ^
+zebra_vty.c:2981:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [%s, %s] is an illegal address range.\n", argv[0], argv[1]);
+         ^
+zebra_vty.c: In function ‘no_ip_dhcp_excluded_address’:
+zebra_vty.c:3016:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3019:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3031:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3036:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[1];
+       ^
+zebra_vty.c:3039:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3051:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3055:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3056:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[1]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3075:9: warning: unknown conversion type character ‘R’ in format [-Wformat=]
+         vty_out (vty, "\% Range [ %s,  %s] is not in the database.\n", argv[0], argv[1]);
+         ^
+zebra_vty.c: In function ‘ip_dhcp_excluded_address_distance1’:
+zebra_vty.c:3094:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3097:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3109:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3113:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c: In function ‘no_ip_dhcp_excluded_address_distance1’:
+zebra_vty.c:3142:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3145:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3157:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3161:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3177:9: warning: unknown conversion type character ‘R’ in format [-Wformat=]
+         vty_out (vty, "\% Range [ %s,  %s] is not in the database.\n", argv[0], argv[0]);
+         ^
+zebra_vty.c: In function ‘ip_dhcp_pool_network’:
+zebra_vty.c:3235:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3238:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3250:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3255:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[1];
+       ^
+zebra_vty.c:3258:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3270:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3274:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3275:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[1]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c: In function ‘no_ip_dhcp_pool_network’:
+zebra_vty.c:3304:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3307:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3319:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3324:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[1];
+       ^
+zebra_vty.c:3327:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3339:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3343:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3344:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[1]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3357:9: warning: unknown conversion type character ‘R’ in format [-Wformat=]
+         vty_out (vty, "\% Range [ %s,  %s] is not in the database.\n", argv[0], argv[1]);
+         ^
+zebra_vty.c: In function ‘ip_dhcp_pool_dnsserver_dnstince1’:
+zebra_vty.c:3372:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3375:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3387:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3391:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c: In function ‘ip_dhcp_pool_dnsserver_dnstince2’:
+zebra_vty.c:3416:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3419:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3431:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3436:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[1];
+       ^
+zebra_vty.c:3439:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3451:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3455:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3456:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[1]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c: In function ‘ip_dhcp_pool_dnsserver’:
+zebra_vty.c:3491:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3494:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3506:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3511:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[1];
+       ^
+zebra_vty.c:3514:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3526:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3531:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[2];
+       ^
+zebra_vty.c:3534:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3546:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3550:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3551:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[1]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3552:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[2]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c: In function ‘ip_dhcp_pool_defaultroute_dnstince1’:
+zebra_vty.c:3620:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3623:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3635:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3639:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c: In function ‘ip_dhcp_pool_defaultroute_dnstince2’:
+zebra_vty.c:3679:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3682:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3694:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3699:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[1];
+       ^
+zebra_vty.c:3702:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3714:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3718:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3719:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[1]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c: In function ‘ip_dhcp_pool_defaultroute’:
+zebra_vty.c:3759:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[0];
+       ^
+zebra_vty.c:3762:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3774:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3779:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[1];
+       ^
+zebra_vty.c:3782:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3794:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3799:7: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     p = argv[2];
+       ^
+zebra_vty.c:3802:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3814:9: warning: unknown conversion type character ‘[’ in format [-Wformat=]
+         vty_out (vty, "% [ZEBRA] Unknown command: %s\n", buf);
+         ^
+zebra_vty.c:3818:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[0]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3819:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[1]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c:3820:5: warning: passing argument 1 of ‘change_ipv4address’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     change_ipv4address (argv[2]);
+     ^
+zebra_vty.c:2726:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void change_ipv4address (char *buf)
+      ^
+zebra_vty.c: In function ‘ip_dhcp_pool_lease’:
+zebra_vty.c:3887:9: warning: passing argument 1 of ‘strcpy’ discards ‘const’ qualifier from pointer target type [enabled by default]
+         strcpy (argv[0], "infinite");
+         ^
+In file included from /usr/include/features.h:374:0,
+                 from /usr/include/unistd.h:25,
+                 from ../lib/zebra.h:40,
+                 from zebra_vty.c:22:
+/usr/include/x86_64-linux-gnu/bits/string3.h:102:1: note: expected ‘char * restrict’ but argument is of type ‘const char *’
+ __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+ ^
+zebra_vty.c: At top level:
+zebra_vty.c:3952:5: warning: no previous prototype for ‘zebra_dhcp_write_config’ [-Wmissing-prototypes]
+ int zebra_dhcp_write_config (struct vty *vty)
+     ^
+zebra_vty.c: In function ‘zebra_dhcp_write_config’:
+zebra_vty.c:3960:10: warning: unused variable ‘testBuf’ [-Wunused-variable]
+     char testBuf[32];
+          ^
+zebra_vty.c:3957:16: warning: unused variable ‘j’ [-Wunused-variable]
+     int fd, i, j;
+                ^
+zebra_vty.c: In function ‘addnodeforheadercompression’:
+zebra_vty.c:4127:17: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+                 ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c:4127:17: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+                 ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c:4139:13: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+             if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+             ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c:4139:13: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+             if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+             ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c: In function ‘delnodeforheadercompression’:
+zebra_vty.c:4172:17: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+                 ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c:4172:17: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+                 ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c: In function ‘addnodeforpolicybasedroute’:
+zebra_vty.c:4225:17: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+                 ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c:4225:17: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+                 ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c:4239:13: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+             if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+             ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c:4239:13: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+             if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+             ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c: In function ‘delnodeforpolicybasedroute’:
+zebra_vty.c:4273:17: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+                 ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c:4273:17: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->node.prefix.u.prefix6,&newnode->node.prefix.u.prefix6,newnode->node.prefix.prefixlen))
+                 ^
+zebra_vty.c:83:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen);
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:4310:1: warning: return type defaults to ‘int’ [enabled by default]
+ send_header_compression_to_dpdk(struct vty *vty,struct prefix *p,int type)
+ ^
+zebra_vty.c:4310:1: warning: no previous prototype for ‘send_header_compression_to_dpdk’ [-Wmissing-prototypes]
+zebra_vty.c:4366:5: warning: no previous prototype for ‘send_polict_based_route_to_dpdk’ [-Wmissing-prototypes]
+ int send_polict_based_route_to_dpdk(struct vty *vty, struct prefix *s, struct prefix *p, struct in6_addr *gate, struct interface *ifp,int type)
+     ^
+zebra_vty.c: In function ‘add_header_compression’:
+zebra_vty.c:4444:9: warning: spurious trailing ‘%’ in format [-Wformat=]
+         vty_out(vty,"this prefix already exist%");
+         ^
+zebra_vty.c: In function ‘del_header_compression’:
+zebra_vty.c:4480:9: warning: spurious trailing ‘%’ in format [-Wformat=]
+         vty_out(vty,"this prefix not exist%");
+         ^
+zebra_vty.c: In function ‘static_add_policy_based_route’:
+zebra_vty.c:4528:9: warning: passing argument 4 of ‘send_polict_based_route_to_dpdk’ from incompatible pointer type [enabled by default]
+         send_polict_based_route_to_dpdk(vty, s, p, &newnode->node.gateway, ifp, 1);
+         ^
+zebra_vty.c:4366:5: note: expected ‘struct in6_addr *’ but argument is of type ‘uint8_t (*)[16]’
+ int send_polict_based_route_to_dpdk(struct vty *vty, struct prefix *s, struct prefix *p, struct in6_addr *gate, struct interface *ifp,int type)
+     ^
+zebra_vty.c: In function ‘static_del_policy_based_route’:
+zebra_vty.c:4546:23: warning: unused variable ‘ifp’ [-Wunused-variable]
+     struct interface *ifp;
+                       ^
+zebra_vty.c: In function ‘header_compression_func’:
+zebra_vty.c:4587:9: warning: unused variable ‘table’ [-Wunused-variable]
+     int table = 0;
+         ^
+zebra_vty.c:4586:12: warning: unused variable ‘type’ [-Wunused-variable]
+     u_char type = 0;
+            ^
+zebra_vty.c:4585:21: warning: unused variable ‘gate_addr’ [-Wunused-variable]
+     struct in6_addr gate_addr;
+                     ^
+zebra_vty.c: In function ‘static_policy_based_route_func’:
+zebra_vty.c:4623:9: warning: unused variable ‘table’ [-Wunused-variable]
+     int table = 0;
+         ^
+zebra_vty.c: In function ‘static_ipv6_customize’:
+zebra_vty.c:4765:9: warning: implicit declaration of function ‘static_add_ipv6_customize’ [-Wimplicit-function-declaration]
+         static_add_ipv6_customize (&p, type, gate, ifname, flag, distance, table);
+         ^
+zebra_vty.c:4767:9: warning: implicit declaration of function ‘static_delete_ipv6_customize’ [-Wimplicit-function-declaration]
+         static_delete_ipv6_customize (&p, type, gate, ifname, distance, table);
+         ^
+zebra_vty.c: In function ‘zebra_ipv6_customize’:
+zebra_vty.c:4780:12: warning: unused variable ‘flag’ [-Wunused-variable]
+     u_char flag = 0;
+            ^
+zebra_vty.c: At top level:
+zebra_vty.c:5095:5: warning: no previous prototype for ‘zebra_connect_dpdk_send_message_two’ [-Wmissing-prototypes]
+ int zebra_connect_dpdk_send_message_two (struct zebra_config_message *p_zebra_msg, int size)
+     ^
+zebra_vty.c:5431:21: warning: no previous prototype for ‘link_search’ [-Wmissing-prototypes]
+ struct tunnel_info *link_search (unsigned int tunnel_num)
+                     ^
+zebra_vty.c:5445:5: warning: no previous prototype for ‘link_create’ [-Wmissing-prototypes]
+ int link_create (struct tunnel_info **p, unsigned int tunnel_num)
+     ^
+zebra_vty.c:5486:5: warning: no previous prototype for ‘link_del’ [-Wmissing-prototypes]
+ int link_del (struct vty *vty, unsigned int tunnel_num)
+     ^
+zebra_vty.c: In function ‘link_del’:
+zebra_vty.c:5496:13: warning: implicit declaration of function ‘check_tunnel’ [-Wimplicit-function-declaration]
+             if (0 == check_tunnel (vty, p, DEL_TUNNEL))
+             ^
+zebra_vty.c: At top level:
+zebra_vty.c:5581:5: warning: no previous prototype for ‘check_tunnel’ [-Wmissing-prototypes]
+ int check_tunnel (struct vty *vty, struct tunnel_info *p, int flag)
+     ^
+zebra_vty.c:5841:7: warning: no previous prototype for ‘myitoa’ [-Wmissing-prototypes]
+ char *myitoa (int num, char *str, int radix)
+       ^
+zebra_vty.c:5905:5: warning: no previous prototype for ‘connect_dpdk’ [-Wmissing-prototypes]
+ int connect_dpdk (struct vty *vty)
+     ^
+zebra_vty.c:5935:5: warning: no previous prototype for ‘ge_mib_fwd_clear’ [-Wmissing-prototypes]
+ int ge_mib_fwd_clear (struct vty *vty, int sockfd)
+     ^
+zebra_vty.c: In function ‘ge_mib_fwd_clear’:
+zebra_vty.c:5941:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &clear_mib_msg[0] = REQUEST_CLEAR_L3FWD_MIB;
+     ^
+zebra_vty.c:5942:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &clear_mib_msg[4] = htonl (8);
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:5956:5: warning: no previous prototype for ‘ge_mib_kni_clear’ [-Wmissing-prototypes]
+ int ge_mib_kni_clear (struct vty *vty, int sockfd)
+     ^
+zebra_vty.c: In function ‘ge_mib_kni_clear’:
+zebra_vty.c:5962:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &clear_mib_msg[0] = REQUEST_CLEAR_KNI_MIB;
+     ^
+zebra_vty.c:5963:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &clear_mib_msg[4] = htonl (8);
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:5977:5: warning: no previous prototype for ‘ge_mib_people_traffic_clear’ [-Wmissing-prototypes]
+ int ge_mib_people_traffic_clear(struct vty *vty, int sockfd)
+     ^
+zebra_vty.c: In function ‘ge_mib_people_traffic_clear’:
+zebra_vty.c:5983:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &clear_mib_msg[0] = REQUEST_CLEAR_SOLDIER_PEOPLR_TRAFFIC_MIB;
+     ^
+zebra_vty.c:5984:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &clear_mib_msg[4] = htonl (8);
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:5999:5: warning: no previous prototype for ‘ge_mib_fwd_read’ [-Wmissing-prototypes]
+ int ge_mib_fwd_read (struct vty *vty, int sockfd)
+     ^
+zebra_vty.c: In function ‘ge_mib_fwd_read’:
+zebra_vty.c:6009:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_mib_msg[0] = REQUEST_L3FWD_MIB;
+     ^
+zebra_vty.c:6010:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_mib_msg[4] = htonl (8);
+     ^
+zebra_vty.c:6031:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     for (i = 0, j = 0, k = 0; i < ret; i += ntohl (*(int *) &buf[i + 4]))
+     ^
+zebra_vty.c:6033:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (*(int *) &buf[i] == RESPONSE_L3FWD_MIB)
+         ^
+zebra_vty.c:6037:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+             memcpy (&l3fwd_stats[j], (char *) &buf[i] + 8, ntohl (*(int *) &buf[i + 4]) - 8);
+             ^
+zebra_vty.c:6041:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (*(int *) &buf[i] == RESPONSE_L3FWD_MIB_VPORT)
+         ^
+zebra_vty.c:6045:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+             memcpy (&vport_stats[k], (char *) &buf[i] + 8, ntohl (*(int *) &buf[i + 4]) - 8);
+             ^
+zebra_vty.c: At top level:
+zebra_vty.c:6176:5: warning: no previous prototype for ‘ge_mib_kni_read’ [-Wmissing-prototypes]
+ int ge_mib_kni_read (struct vty *vty, int sockfd)
+     ^
+zebra_vty.c: In function ‘ge_mib_kni_read’:
+zebra_vty.c:6186:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_mib_msg[0] = REQUEST_KNI_MIB;
+     ^
+zebra_vty.c:6187:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_mib_msg[4] = htonl (8);
+     ^
+zebra_vty.c:6207:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     for (i = 0, j = 0; i < ret; i += ntohl (*(int *) &buf[i + 4]))
+     ^
+zebra_vty.c:6209:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (*(int *) &buf[i] == RESPONSE_KNI_MIB)
+         ^
+zebra_vty.c:6211:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+             memcpy (&kni_stats[j], (char *) &buf[i] + 8, ntohl (*(int *) &buf[i + 4]) - 8);
+             ^
+zebra_vty.c: At top level:
+zebra_vty.c:6265:5: warning: no previous prototype for ‘ge_mib_people_traffic_read’ [-Wmissing-prototypes]
+ int ge_mib_people_traffic_read (struct vty *vty, int sockfd)
+     ^
+zebra_vty.c: In function ‘ge_mib_people_traffic_read’:
+zebra_vty.c:6275:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_mib_msg[0] = REQUSET_SOLDIER_PEOPLR_TRAFFIC_MIB;
+     ^
+zebra_vty.c:6276:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_mib_msg[4] = htonl (8);
+     ^
+zebra_vty.c:6296:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     for (i = 0, j = 0; i < ret; i += ntohl (*(int *) &buf[i + 4]))
+     ^
+zebra_vty.c:6298:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         printf("type:%02x",*(int *) &buf[i]);
+         ^
+zebra_vty.c:6299:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (*(int *) &buf[i] == RESPONSE_SOLDIER_PEOPLR_TRAFFIC_MIB)
+         ^
+zebra_vty.c:6301:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+             memcpy (&people_traffic_statistics[j], (char *) &buf[i] + 8, ntohl (*(int *) &buf[i + 4]) - 8);
+             ^
+zebra_vty.c: At top level:
+zebra_vty.c:6328:5: warning: no previous prototype for ‘v4_route_read’ [-Wmissing-prototypes]
+ int v4_route_read (struct vty *vty, int sockfd)
+     ^
+zebra_vty.c: In function ‘v4_route_read’:
+zebra_vty.c:6339:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[0] = REQUEST_V4_ROUTE_TABLE;
+     ^
+zebra_vty.c:6340:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[4] = htonl (8);
+     ^
+zebra_vty.c:6364:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     for (i = 0; i < ret; i += ntohl (*(int *) &buf[i + 4]))
+     ^
+zebra_vty.c:6366:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (*(int *) &buf[i] == RESPONSE_V4_ROUTE_TABLE)
+         ^
+zebra_vty.c:6369:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+             memcpy (&rtInfo, (char *) &buf[i] + 8, ntohl (*(int *) &buf[i + 4]) - 8);
+             ^
+zebra_vty.c: At top level:
+zebra_vty.c:6388:6: warning: no previous prototype for ‘private_read_route_info_from_buf’ [-Wmissing-prototypes]
+ void private_read_route_info_from_buf(struct vty *vty, int len, char *buf, int type)
+      ^
+zebra_vty.c: In function ‘private_read_route_info_from_buf’:
+zebra_vty.c:6465:9: warning: statement with no effect [-Wunused-value]
+         for (i; i < tmp_len; i += ntohl (*(int *) &buf[i + 4]))
+         ^
+zebra_vty.c: At top level:
+zebra_vty.c:6529:6: warning: no previous prototype for ‘read_route_info_from_buf’ [-Wmissing-prototypes]
+ void read_route_info_from_buf(struct vty *vty, int len, char *buf, int type)
+      ^
+zebra_vty.c: In function ‘read_route_info_from_buf’:
+zebra_vty.c:6606:9: warning: statement with no effect [-Wunused-value]
+         for (i; i < tmp_len; i += ntohl (*(int *) &buf[i + 4]))
+         ^
+zebra_vty.c: At top level:
+zebra_vty.c:6672:5: warning: no previous prototype for ‘customize_route_read’ [-Wmissing-prototypes]
+ int customize_route_read (struct vty *vty, int sockfd, int type)
+     ^
+zebra_vty.c: In function ‘customize_route_read’:
+zebra_vty.c:6679:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[0] = REQUEST_CUSTOMIZE_ROUTE;
+     ^
+zebra_vty.c:6680:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[4] = htonl (9);
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:6707:5: warning: no previous prototype for ‘private_customize_route_read’ [-Wmissing-prototypes]
+ int private_customize_route_read (struct vty *vty, int sockfd, int type)
+     ^
+zebra_vty.c: In function ‘private_customize_route_read’:
+zebra_vty.c:6714:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[0] = REQUEST_CUSTOMIZE_ROUTE;
+     ^
+zebra_vty.c:6715:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[4] = htonl (9);
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:6741:5: warning: no previous prototype for ‘v6_interface_status_read’ [-Wmissing-prototypes]
+ int v6_interface_status_read (struct vty *vty, int sockfd,int flag)
+     ^
+zebra_vty.c: In function ‘v6_interface_status_read’:
+zebra_vty.c:6753:5: warning: missing braces around initializer [-Wmissing-braces]
+     int interface_array[4][5] = {0};
+     ^
+zebra_vty.c:6753:5: warning: (near initialization for ‘interface_array[0]’) [-Wmissing-braces]
+zebra_vty.c:6759:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[0] = RESPONSE_INTERFACE_STATUS;
+     ^
+zebra_vty.c:6760:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[4] = htonl (8);
+     ^
+zebra_vty.c:6754:10: warning: unused variable ‘name’ [-Wunused-variable]
+     char name[20];
+          ^
+zebra_vty.c:6753:9: warning: unused variable ‘interface_array’ [-Wunused-variable]
+     int interface_array[4][5] = {0};
+         ^
+zebra_vty.c:6751:9: warning: unused variable ‘total’ [-Wunused-variable]
+     int total = 0;
+         ^
+zebra_vty.c:6750:23: warning: unused variable ‘rtInfo’ [-Wunused-variable]
+     struct route_info rtInfo;
+                       ^
+zebra_vty.c:6749:10: warning: unused variable ‘tmp_2’ [-Wunused-variable]
+     char tmp_2[256];
+          ^
+zebra_vty.c:6748:10: warning: unused variable ‘tmp’ [-Wunused-variable]
+     char tmp[192];
+          ^
+zebra_vty.c:6744:9: warning: unused variable ‘i’ [-Wunused-variable]
+     int i;
+         ^
+zebra_vty.c: At top level:
+zebra_vty.c:6833:5: warning: no previous prototype for ‘v6_route_read’ [-Wmissing-prototypes]
+ int v6_route_read (struct vty *vty, int sockfd,int flag)
+     ^
+zebra_vty.c: In function ‘v6_route_read’:
+zebra_vty.c:6845:5: warning: missing braces around initializer [-Wmissing-braces]
+     int interface_array[4][5] = {0};
+     ^
+zebra_vty.c:6845:5: warning: (near initialization for ‘interface_array[0]’) [-Wmissing-braces]
+zebra_vty.c:6851:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[0] = REQUEST_V6_ROUTE_TABLE;
+     ^
+zebra_vty.c:6852:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[4] = htonl (8);
+     ^
+zebra_vty.c:6878:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     for (i = 0; i < ret; i += ntohl (*(int *) &buf[i + 4]))
+     ^
+zebra_vty.c:6881:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (*(int *) &buf[i] == RESPONSE_V6_ROUTE_TABLE)
+         ^
+zebra_vty.c:6884:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+             memcpy (&rtInfo, (char *) &buf[i] + 8, ntohl (*(int *) &buf[i + 4]) - 8);
+             ^
+zebra_vty.c:6846:10: warning: unused variable ‘name’ [-Wunused-variable]
+     char name[20];
+          ^
+zebra_vty.c: At top level:
+zebra_vty.c:6977:5: warning: no previous prototype for ‘v6_acl_read’ [-Wmissing-prototypes]
+ int v6_acl_read(struct vty *vty, int sockfd)
+     ^
+zebra_vty.c: In function ‘v6_acl_read’:
+zebra_vty.c:6993:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[0] = REQUEST_V6_ACL_TABLE;
+     ^
+zebra_vty.c:6994:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_route_msg[4] = htonl (8);
+     ^
+zebra_vty.c:7039:31: warning: initialization from incompatible pointer type [enabled by default]
+         struct acl6_rule *p = buf+i;
+                               ^
+zebra_vty.c:7036:9: warning: unused variable ‘j’ [-Wunused-variable]
+     int j;
+         ^
+zebra_vty.c:6987:23: warning: unused variable ‘rtInfo’ [-Wunused-variable]
+     struct route_info rtInfo;
+                       ^
+zebra_vty.c:6986:10: warning: unused variable ‘tmp_2’ [-Wunused-variable]
+     char tmp_2[256];
+          ^
+zebra_vty.c:6985:10: warning: unused variable ‘tmp’ [-Wunused-variable]
+     char tmp[192];
+          ^
+zebra_vty.c: At top level:
+zebra_vty.c:7206:5: warning: no previous prototype for ‘v4_arp_read’ [-Wmissing-prototypes]
+ int v4_arp_read (struct vty *vty, int sockfd)
+     ^
+zebra_vty.c: In function ‘v4_arp_read’:
+zebra_vty.c:7218:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_arp_msg[0] = REQUEST_V4_ARP_TABLE;
+     ^
+zebra_vty.c:7219:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_arp_msg[4] = htonl (8);
+     ^
+zebra_vty.c:7241:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     for (i = 0; i < ret; i += ntohl (*(int *) &buf[i + 4]))
+     ^
+zebra_vty.c:7243:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (*(int *) &buf[i] == RESPONSE_V4_ARP_TABLE)
+         ^
+zebra_vty.c:7246:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+             memcpy (&arpInfo, (char *) &buf[i] + 8, ntohl (*(int *) &buf[i + 4]) - 8);
+             ^
+zebra_vty.c: At top level:
+zebra_vty.c:7263:5: warning: no previous prototype for ‘v6_nd_read’ [-Wmissing-prototypes]
+ int v6_nd_read (struct vty *vty, int sockfd)
+     ^
+zebra_vty.c: In function ‘v6_nd_read’:
+zebra_vty.c:7275:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_nd_msg[0] = REQUEST_V6_ND_TABLE;
+     ^
+zebra_vty.c:7276:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &get_nd_msg[4] = htonl (8);
+     ^
+zebra_vty.c:7298:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     for (i = 0; i < ret; i += ntohl (*(int *) &buf[i + 4]))
+     ^
+zebra_vty.c:7300:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (*(int *) &buf[i] == RESPONSE_V6_ND_TABLE)
+         ^
+zebra_vty.c:7303:13: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+             memcpy (&arpInfo, (char *) &buf[i] + 8, ntohl (*(int *) &buf[i + 4]) - 8);
+             ^
+zebra_vty.c: At top level:
+zebra_vty.c:7319:5: warning: no previous prototype for ‘debug_model’ [-Wmissing-prototypes]
+ int debug_model(struct vty *vty, int sockfd, int model)
+     ^
+zebra_vty.c: In function ‘debug_model’:
+zebra_vty.c:7326:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         *(int *) &debug_msg[0] = REQUEST_NODEBUG;
+         ^
+zebra_vty.c:7328:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         *(int *) &debug_msg[0] = REQUEST_DEBUG;
+         ^
+zebra_vty.c:7330:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *) &debug_msg[4] = htonl (8);
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:7460:5: warning: no previous prototype for ‘zebra_ivi_write_config’ [-Wmissing-prototypes]
+ int zebra_ivi_write_config (struct vty *vty, char *ifname)
+     ^
+zebra_vty.c: In function ‘no_tunnel4o6_tcp_mss’:
+zebra_vty.c:7941:26: warning: assignment from incompatible pointer type [enabled by default]
+             ifr.ifr_data = &set_mss;
+                          ^
+zebra_vty.c:7902:39: warning: variable ‘pNew’ set but not used [-Wunused-but-set-variable]
+     struct zebra_4over6_tunnel_entry *pNew;
+                                       ^
+zebra_vty.c: In function ‘show_ipv6_policy_route’:
+zebra_vty.c:8598:9: warning: unused variable ‘i’ [-Wunused-variable]
+     int i=0;
+         ^
+zebra_vty.c:8597:10: warning: unused variable ‘type’ [-Wunused-variable]
+     char type[8];
+          ^
+In file included from zebra_vty.c:35:0:
+zebra_vty.c: At top level:
+zebra_vty.c:8635:8: error: redefinition of ‘show_ipv6_policy_route_cmd’
+        show_ipv6_policy_route_cmd,
+        ^
+../lib/command.h:190:22: note: in definition of macro ‘DEFUN_CMD_ELEMENT’
+   struct cmd_element cmdname = \
+                      ^
+zebra_vty.c:8634:1: note: in expansion of macro ‘DEFUN’
+ DEFUN (show_ipv6_twod_route,
+ ^
+zebra_vty.c:8588:8: note: previous definition of ‘show_ipv6_policy_route_cmd’ was here
+        show_ipv6_policy_route_cmd,
+        ^
+../lib/command.h:190:22: note: in definition of macro ‘DEFUN_CMD_ELEMENT’
+   struct cmd_element cmdname = \
+                      ^
+zebra_vty.c:8587:1: note: in expansion of macro ‘DEFUN’
+ DEFUN (show_ipv6_policy_route,
+ ^
+zebra_vty.c: In function ‘show_ipv6_twod_route’:
+zebra_vty.c:8645:9: warning: unused variable ‘i’ [-Wunused-variable]
+     int i=0;
+         ^
+zebra_vty.c:8644:10: warning: unused variable ‘type’ [-Wunused-variable]
+     char type[8];
+          ^
+zebra_vty.c: In function ‘show_ipv6_route_table_name’:
+zebra_vty.c:8764:9: warning: unused variable ‘first’ [-Wunused-variable]
+     int first = 1;
+         ^
+zebra_vty.c:8760:25: warning: unused variable ‘table’ [-Wunused-variable]
+     struct route_table *table;
+                         ^
+zebra_vty.c: In function ‘show_ipv6_frt_route_addr’:
+zebra_vty.c:8902:22: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     msg_to_dpdk.data = argv[0];
+                      ^
+zebra_vty.c:8889:24: warning: unused variable ‘rn’ [-Wunused-variable]
+     struct route_node *rn;
+                        ^
+zebra_vty.c:8888:25: warning: unused variable ‘table’ [-Wunused-variable]
+     struct route_table *table;
+                         ^
+zebra_vty.c: At top level:
+zebra_vty.c:9111:6: warning: no previous prototype for ‘dns64_prfix_dns_set’ [-Wmissing-prototypes]
+ void dns64_prfix_dns_set (char *v6p, char *v4Dnstr)
+      ^
+zebra_vty.c: In function ‘dns64_prfix_dns_set’:
+zebra_vty.c:9113:10: warning: unused variable ‘v6_str’ [-Wunused-variable]
+     char v6_str[INET6_ADDRSTRLEN];
+          ^
+zebra_vty.c: At top level:
+zebra_vty.c:9129:6: warning: no previous prototype for ‘dns64_prfix_dns_unset’ [-Wmissing-prototypes]
+ void dns64_prfix_dns_unset ()
+      ^
+zebra_vty.c:9136:6: warning: no previous prototype for ‘dns64_config_check’ [-Wmissing-prototypes]
+ BYTE dns64_config_check ()
+      ^
+zebra_vty.c: In function ‘dns64_prefix’:
+zebra_vty.c:9190:5: warning: passing argument 1 of ‘dns64_prfix_dns_set’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     dns64_prfix_dns_set (argv[0], argv[2]);
+     ^
+zebra_vty.c:9111:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void dns64_prfix_dns_set (char *v6p, char *v4Dnstr)
+      ^
+zebra_vty.c:9190:5: warning: passing argument 2 of ‘dns64_prfix_dns_set’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     dns64_prfix_dns_set (argv[0], argv[2]);
+     ^
+zebra_vty.c:9111:6: note: expected ‘char *’ but argument is of type ‘const char *’
+ void dns64_prfix_dns_set (char *v6p, char *v4Dnstr)
+      ^
+zebra_vty.c: At top level:
+zebra_vty.c:9252:6: warning: no previous prototype for ‘addnodeforsectionenginetable’ [-Wmissing-prototypes]
+ void addnodeforsectionenginetable(struct sectionengine_table *newnode)
+      ^
+zebra_vty.c:9272:6: warning: no previous prototype for ‘addnodeforprocessingenginetable’ [-Wmissing-prototypes]
+ void addnodeforprocessingenginetable(struct processing_engine_table *newnode)
+      ^
+zebra_vty.c:9292:6: warning: no previous prototype for ‘addnodeforflowenginetable’ [-Wmissing-prototypes]
+ void addnodeforflowenginetable(struct flow_engine_table *newnode)
+      ^
+zebra_vty.c:9315:6: warning: no previous prototype for ‘delnode’ [-Wmissing-prototypes]
+ void delnode(struct sectionengine_table *pos)
+      ^
+zebra_vty.c:9337:6: warning: no previous prototype for ‘delnodefromprocessingenginetable’ [-Wmissing-prototypes]
+ void delnodefromprocessingenginetable(struct processing_engine_table *pos)
+      ^
+zebra_vty.c:9359:6: warning: no previous prototype for ‘delnodefromflowenginetable’ [-Wmissing-prototypes]
+ void delnodefromflowenginetable(struct flow_engine_table *pos)
+      ^
+zebra_vty.c:9384:5: warning: no previous prototype for ‘delnodeforsectionenginetable’ [-Wmissing-prototypes]
+ int delnodeforsectionenginetable(struct vty *vty,char *name)
+     ^
+zebra_vty.c:9415:5: warning: no previous prototype for ‘delnodeforprocessingenginetable’ [-Wmissing-prototypes]
+ int delnodeforprocessingenginetable(struct vty *vty,char *name)
+     ^
+zebra_vty.c:9444:5: warning: no previous prototype for ‘delnodeforflowenginetable’ [-Wmissing-prototypes]
+ int delnodeforflowenginetable(char *name)
+     ^
+zebra_vty.c:9471:30: warning: no previous prototype for ‘sectionenginenameLegalitycheck’ [-Wmissing-prototypes]
+ struct sectionengine_table * sectionenginenameLegalitycheck(char *name)
+                              ^
+zebra_vty.c:9491:34: warning: no previous prototype for ‘processingenginenameLegalitycheck’ [-Wmissing-prototypes]
+ struct processing_engine_table * processingenginenameLegalitycheck(char *name)
+                                  ^
+zebra_vty.c:9511:5: warning: no previous prototype for ‘flowenginenameLegalitycheck’ [-Wmissing-prototypes]
+ int flowenginenameLegalitycheck(char *name)
+     ^
+zebra_vty.c:9584:5: warning: no previous prototype for ‘sectionroutecheck’ [-Wmissing-prototypes]
+ int sectionroutecheck(struct vty *vty, struct prefix v6prefix,char *sec_name,int *comp_j)
+     ^
+zebra_vty.c: In function ‘sectionroutecheck’:
+zebra_vty.c:9629:17: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->sectionengine.v6prefix[i].u.prefix6,&v6prefix.u.prefix6,v6prefix.prefixlen))
+                 ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:9629:17: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->sectionengine.v6prefix[i].u.prefix6,&v6prefix.u.prefix6,v6prefix.prefixlen))
+                 ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:9656:5: warning: no previous prototype for ‘routeLegalitycheck’ [-Wmissing-prototypes]
+ int routeLegalitycheck(struct vty *vty,int argc,char **argv,char *sec_name,int *comp_i,int *comp_j)
+     ^
+zebra_vty.c: In function ‘routeLegalitycheck’:
+zebra_vty.c:9688:17: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&v6p_i.u.prefix6,&v6p_j.u.prefix6,v6p_j.prefixlen))
+                 ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:9688:17: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&v6p_i.u.prefix6,&v6p_j.u.prefix6,v6p_j.prefixlen))
+                 ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:9697:17: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&v6p_i.u.prefix6,&v6p_j.u.prefix6,v6p_i.prefixlen))
+                 ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:9697:17: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&v6p_i.u.prefix6,&v6p_j.u.prefix6,v6p_i.prefixlen))
+                 ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:9727:5: warning: no previous prototype for ‘addsectionengine’ [-Wmissing-prototypes]
+ int addsectionengine(struct vty *vty,int argc ,char **argv)
+     ^
+zebra_vty.c: In function ‘addsectionengine’:
+zebra_vty.c:9732:19: warning: unused variable ‘v6p’ [-Wunused-variable]
+     struct prefix v6p;
+                   ^
+zebra_vty.c: In function ‘slicing_engine2’:
+zebra_vty.c:9797:5: warning: passing argument 3 of ‘addsectionengine’ from incompatible pointer type [enabled by default]
+     addsectionengine(vty,argc ,argv);
+     ^
+zebra_vty.c:9727:5: note: expected ‘char **’ but argument is of type ‘const char **’
+ int addsectionengine(struct vty *vty,int argc ,char **argv)
+     ^
+zebra_vty.c: In function ‘slicing_engine3’:
+zebra_vty.c:9809:5: warning: passing argument 3 of ‘addsectionengine’ from incompatible pointer type [enabled by default]
+     addsectionengine(vty,argc ,argv);
+     ^
+zebra_vty.c:9727:5: note: expected ‘char **’ but argument is of type ‘const char **’
+ int addsectionengine(struct vty *vty,int argc ,char **argv)
+     ^
+zebra_vty.c: In function ‘slicing_engine4’:
+zebra_vty.c:9820:5: warning: passing argument 3 of ‘addsectionengine’ from incompatible pointer type [enabled by default]
+     addsectionengine(vty,argc ,argv);
+     ^
+zebra_vty.c:9727:5: note: expected ‘char **’ but argument is of type ‘const char **’
+ int addsectionengine(struct vty *vty,int argc ,char **argv)
+     ^
+zebra_vty.c: In function ‘slicing_engine5’:
+zebra_vty.c:9832:5: warning: passing argument 3 of ‘addsectionengine’ from incompatible pointer type [enabled by default]
+     addsectionengine(vty,argc ,argv);
+     ^
+zebra_vty.c:9727:5: note: expected ‘char **’ but argument is of type ‘const char **’
+ int addsectionengine(struct vty *vty,int argc ,char **argv)
+     ^
+zebra_vty.c: In function ‘slicing_engine6’:
+zebra_vty.c:9845:5: warning: passing argument 3 of ‘addsectionengine’ from incompatible pointer type [enabled by default]
+     addsectionengine(vty,argc ,argv);
+     ^
+zebra_vty.c:9727:5: note: expected ‘char **’ but argument is of type ‘const char **’
+ int addsectionengine(struct vty *vty,int argc ,char **argv)
+     ^
+zebra_vty.c: In function ‘slicing_engine’:
+zebra_vty.c:9865:5: warning: passing argument 3 of ‘addsectionengine’ from incompatible pointer type [enabled by default]
+     addsectionengine(vty,argc ,argv);
+     ^
+zebra_vty.c:9727:5: note: expected ‘char **’ but argument is of type ‘const char **’
+ int addsectionengine(struct vty *vty,int argc ,char **argv)
+     ^
+zebra_vty.c: In function ‘no_slicing_engine’:
+zebra_vty.c:9880:10: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     name = argv[0];
+          ^
+zebra_vty.c:9877:19: warning: unused variable ‘v6p’ [-Wunused-variable]
+     struct prefix v6p;
+                   ^
+zebra_vty.c:9876:9: warning: unused variable ‘ret’ [-Wunused-variable]
+     int ret;
+         ^
+zebra_vty.c: In function ‘processing_engine’:
+zebra_vty.c:9917:5: warning: passing argument 1 of ‘processingenginenameLegalitycheck’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     pos = processingenginenameLegalitycheck(argv[0]);
+     ^
+zebra_vty.c:9491:34: note: expected ‘char *’ but argument is of type ‘const char *’
+ struct processing_engine_table * processingenginenameLegalitycheck(char *name)
+                                  ^
+zebra_vty.c:9940:25: warning: format ‘%s’ expects a matching ‘char *’ argument [-Wformat=]
+                         vty_out (vty, "%% forwarding routing table %s is already binded  %s", VTY_NEWLINE);
+                         ^
+zebra_vty.c:9912:9: warning: unused variable ‘ret’ [-Wunused-variable]
+     int ret,i=0;
+         ^
+zebra_vty.c: In function ‘no_processing_engine’:
+zebra_vty.c:10051:10: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     name = argv[0];
+          ^
+zebra_vty.c:10048:9: warning: unused variable ‘ret’ [-Wunused-variable]
+     int ret;
+         ^
+zebra_vty.c: At top level:
+zebra_vty.c:10067:5: warning: no previous prototype for ‘send_real_ipv6_source_address_msg_to_dpdk’ [-Wmissing-prototypes]
+ int send_real_ipv6_source_address_msg_to_dpdk(int type ,struct vty *vty,int len,char *buf)
+     ^
+zebra_vty.c:10109:5: warning: no previous prototype for ‘send_flow_engine_to_dpdk’ [-Wmissing-prototypes]
+ int send_flow_engine_to_dpdk (struct vty *vty,int len,char *buf)
+     ^
+zebra_vty.c:10144:5: warning: no previous prototype for ‘send_del_flow_to_dpdk’ [-Wmissing-prototypes]
+ int send_del_flow_to_dpdk (struct vty *vty,int len, char *buf)
+     ^
+zebra_vty.c: In function ‘addrouteforroute1’:
+zebra_vty.c:10185:5: warning: implicit declaration of function ‘install_customize_route_by_file_name’ [-Wimplicit-function-declaration]
+     install_customize_route_by_file_name(argc,argv);
+     ^
+zebra_vty.c:10186:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+zebra_vty.c: At top level:
+zebra_vty.c:10272:5: warning: no previous prototype for ‘flow_check_inter_area’ [-Wmissing-prototypes]
+ int flow_check_inter_area(char *ifname)
+     ^
+zebra_vty.c:10288:5: warning: no previous prototype for ‘flow_add_area_list’ [-Wmissing-prototypes]
+ int flow_add_area_list(char *ifname,char flag)
+     ^
+zebra_vty.c:10330:5: warning: no previous prototype for ‘send_control_msg_dpdk’ [-Wmissing-prototypes]
+ int send_control_msg_dpdk(struct vty*vty)
+     ^
+zebra_vty.c: In function ‘send_control_msg_dpdk’:
+zebra_vty.c:10394:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *)&send_msg[0] = SOLDIER_PEOPLE_TRAFFIC_CONFIG_INFO;
+     ^
+zebra_vty.c:10395:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *(int *)&send_msg[1] = htonl(sizeof (struct tlv_flow1) + 16 * count_i + 8);
+     ^
+zebra_vty.c:10397:5: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ret = send (sock_fd, send_msg, ntohl((*(int *)&send_msg[1])), 0);
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:10407:5: warning: no previous prototype for ‘update_control_msg_to_dpdk’ [-Wmissing-prototypes]
+ int update_control_msg_to_dpdk(char *ifname,struct vty*vty)
+     ^
+zebra_vty.c: In function ‘enable_interface_area’:
+zebra_vty.c:10437:5: warning: passing argument 1 of ‘flow_check_inter_area’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     if(flow_check_inter_area(argv[0])<0)
+     ^
+zebra_vty.c:10272:5: note: expected ‘char *’ but argument is of type ‘const char *’
+ int flow_check_inter_area(char *ifname)
+     ^
+zebra_vty.c:10445:5: warning: passing argument 1 of ‘flow_add_area_list’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     flow_add_area_list(argv[0],flag);
+     ^
+zebra_vty.c:10288:5: note: expected ‘char *’ but argument is of type ‘const char *’
+ int flow_add_area_list(char *ifname,char flag)
+     ^
+zebra_vty.c:10446:5: warning: passing argument 1 of ‘update_control_msg_to_dpdk’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     update_control_msg_to_dpdk(argv[0],vty);
+     ^
+zebra_vty.c:10407:5: note: expected ‘char *’ but argument is of type ‘const char *’
+ int update_control_msg_to_dpdk(char *ifname,struct vty*vty)
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:10451:5: warning: no previous prototype for ‘flow_del_area_list’ [-Wmissing-prototypes]
+ int flow_del_area_list(char *ifname)
+     ^
+zebra_vty.c: In function ‘no_enable_interface_area’:
+zebra_vty.c:10493:5: warning: passing argument 1 of ‘flow_del_area_list’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     flow_del_area_list(argv[0]);
+     ^
+zebra_vty.c:10451:5: note: expected ‘char *’ but argument is of type ‘const char *’
+ int flow_del_area_list(char *ifname)
+     ^
+zebra_vty.c:10494:5: warning: passing argument 1 of ‘update_control_msg_to_dpdk’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     update_control_msg_to_dpdk(argv[0],vty);
+     ^
+zebra_vty.c:10407:5: note: expected ‘char *’ but argument is of type ‘const char *’
+ int update_control_msg_to_dpdk(char *ifname,struct vty*vty)
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:10519:6: warning: no previous prototype for ‘show_configure_info’ [-Wmissing-prototypes]
+ void show_configure_info(struct vty* vty, char *recv_buf)
+      ^
+zebra_vty.c: In function ‘show_configure_info’:
+zebra_vty.c:10563:5: warning: ‘return’ with a value, in function returning void [enabled by default]
+     return 0;
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:10645:5: warning: no previous prototype for ‘add_node_for_real_ipv6_source_address_link’ [-Wmissing-prototypes]
+ int add_node_for_real_ipv6_source_address_link(struct vty *vty,struct real_ipv6_source_address_link *new_node)
+     ^
+zebra_vty.c: In function ‘add_node_for_real_ipv6_source_address_link’:
+zebra_vty.c:10667:13: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+             if(!g_U8_t_DataMemcmp(&pos->node.source_addr_prefix.u.prefix6,&new_node->node.source_addr_prefix.u.prefix6,new_node->node.source_addr_prefix.prefixlen))
+             ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:10667:13: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+             if(!g_U8_t_DataMemcmp(&pos->node.source_addr_prefix.u.prefix6,&new_node->node.source_addr_prefix.u.prefix6,new_node->node.source_addr_prefix.prefixlen))
+             ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:10670:17: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘long unsigned int’ [-Wformat=]
+                 vty_out(vty,"%% %s %s %d  %s ",pos->node.ifname,new_node->node.ifname,sizeof(new_node->node.ifname),VTY_NEWLINE);
+                 ^
+zebra_vty.c: At top level:
+zebra_vty.c:10699:5: warning: no previous prototype for ‘del_node_for_real_ipv6_source_address_link’ [-Wmissing-prototypes]
+ int del_node_for_real_ipv6_source_address_link(struct vty *vty,struct real_ipv6_source_address_link *new_node)
+     ^
+zebra_vty.c: In function ‘del_node_for_real_ipv6_source_address_link’:
+zebra_vty.c:10714:13: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+             if(!g_U8_t_DataMemcmp(&pos->node.source_addr_prefix.u.prefix6,&new_node->node.source_addr_prefix.u.prefix6,new_node->node.source_addr_prefix.prefixlen))
+             ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:10714:13: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+             if(!g_U8_t_DataMemcmp(&pos->node.source_addr_prefix.u.prefix6,&new_node->node.source_addr_prefix.u.prefix6,new_node->node.source_addr_prefix.prefixlen))
+             ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:10719:17: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘long unsigned int’ [-Wformat=]
+                 vty_out(vty,"%% %s %s %d  %s ",pos->node.ifname,new_node->node.ifname,sizeof(new_node->node.ifname),VTY_NEWLINE);
+                 ^
+zebra_vty.c:10703:43: warning: variable ‘prev’ set but not used [-Wunused-but-set-variable]
+     struct real_ipv6_source_address_link *prev;
+                                           ^
+zebra_vty.c: In function ‘access_real_ipv6_source_address’:
+zebra_vty.c:10757:14: warning: assignment from incompatible pointer type [enabled by default]
+     new_node = (struct real_ipv6_source_addrss_link *)malloc(sizeof(struct real_ipv6_source_address_link));
+              ^
+zebra_vty.c: In function ‘no_access_real_ipv6_source_address’:
+zebra_vty.c:10801:14: warning: assignment from incompatible pointer type [enabled by default]
+     new_node = (struct real_ipv6_source_addrss_link *)malloc(sizeof(struct real_ipv6_source_address_link));
+              ^
+zebra_vty.c: At top level:
+zebra_vty.c:10832:5: warning: no previous prototype for ‘send_ipv6_server_forwarding_status_to_dpdk’ [-Wmissing-prototypes]
+ int send_ipv6_server_forwarding_status_to_dpdk (struct vty *vty, uint8_t status)
+     ^
+zebra_vty.c:10890:5: warning: no previous prototype for ‘ifmpclientexist’ [-Wmissing-prototypes]
+ int ifmpclientexist(int client_id)
+     ^
+zebra_vty.c: In function ‘ifmpclientexist’:
+zebra_vty.c:10894:9: warning: unused variable ‘status’ [-Wunused-variable]
+     int status = 0;
+         ^
+zebra_vty.c: In function ‘flow_engine’:
+zebra_vty.c:10959:5: warning: passing argument 1 of ‘flowenginenameLegalitycheck’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     ret = flowenginenameLegalitycheck(argv[0]);
+     ^
+zebra_vty.c:9511:5: note: expected ‘char *’ but argument is of type ‘const char *’
+ int flowenginenameLegalitycheck(char *name)
+     ^
+zebra_vty.c:10967:5: warning: passing argument 1 of ‘sectionenginenameLegalitycheck’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     pos = sectionenginenameLegalitycheck(argv[1]);
+     ^
+zebra_vty.c:9471:30: note: expected ‘char *’ but argument is of type ‘const char *’
+ struct sectionengine_table * sectionenginenameLegalitycheck(char *name)
+                              ^
+zebra_vty.c:10980:5: warning: passing argument 1 of ‘processingenginenameLegalitycheck’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     process_pos= processingenginenameLegalitycheck(argv[2]);
+     ^
+zebra_vty.c:9491:34: note: expected ‘char *’ but argument is of type ‘const char *’
+ struct processing_engine_table * processingenginenameLegalitycheck(char *name)
+                                  ^
+zebra_vty.c:10939:11: warning: unused variable ‘index’ [-Wunused-variable]
+     int i,index,j;
+           ^
+zebra_vty.c: At top level:
+zebra_vty.c:11120:5: warning: no previous prototype for ‘kill_process_by_name’ [-Wmissing-prototypes]
+ int kill_process_by_name(char *processname)
+     ^
+zebra_vty.c: In function ‘no_flow_engine’:
+zebra_vty.c:11173:10: warning: assignment discards ‘const’ qualifier from pointer target type [enabled by default]
+     name = argv[0];
+          ^
+zebra_vty.c: At top level:
+zebra_vty.c:11686:5: warning: no previous prototype for ‘zebra_flowengine_write_config’ [-Wmissing-prototypes]
+ int zebra_flowengine_write_config (struct vty *vty)
+     ^
+zebra_vty.c:11756:5: warning: no previous prototype for ‘zebra_header_compression_write_config’ [-Wmissing-prototypes]
+ int zebra_header_compression_write_config (struct vty *vty)
+     ^
+zebra_vty.c: In function ‘zebra_header_compression_write_config’:
+zebra_vty.c:11762:9: warning: unused variable ‘i’ [-Wunused-variable]
+     int i=0;
+         ^
+zebra_vty.c:11761:10: warning: unused variable ‘type’ [-Wunused-variable]
+     char type[8];
+          ^
+zebra_vty.c: At top level:
+zebra_vty.c:11780:5: warning: no previous prototype for ‘zebra_policy_based_route_write_config’ [-Wmissing-prototypes]
+ int zebra_policy_based_route_write_config (struct vty *vty)
+     ^
+zebra_vty.c: In function ‘zebra_policy_based_route_write_config’:
+zebra_vty.c:11786:9: warning: unused variable ‘i’ [-Wunused-variable]
+     int i=0;
+         ^
+zebra_vty.c:11785:10: warning: unused variable ‘type’ [-Wunused-variable]
+     char type[8];
+          ^
+zebra_vty.c: At top level:
+zebra_vty.c:11813:5: warning: no previous prototype for ‘zebra_ipv6_server_forwarding_status_write_config’ [-Wmissing-prototypes]
+ int zebra_ipv6_server_forwarding_status_write_config (struct vty *vty)
+     ^
+zebra_vty.c:11822:5: warning: no previous prototype for ‘zebra_area_table__write_config’ [-Wmissing-prototypes]
+ int zebra_area_table__write_config (struct vty *vty)
+     ^
+zebra_vty.c:11838:5: warning: no previous prototype for ‘zebra_real_ipv6_source_address_write_config’ [-Wmissing-prototypes]
+ int zebra_real_ipv6_source_address_write_config (struct vty *vty)
+     ^
+zebra_vty.c: In function ‘zebra_real_ipv6_source_address_write_config’:
+zebra_vty.c:11844:10: warning: unused variable ‘gateway’ [-Wunused-variable]
+     char gateway[40];
+          ^
+zebra_vty.c:11842:10: warning: unused variable ‘type’ [-Wunused-variable]
+     char type[8];
+          ^
+zebra_vty.c: At top level:
+zebra_vty.c:11870:5: warning: no previous prototype for ‘zebra_dns64_write_config’ [-Wmissing-prototypes]
+ int zebra_dns64_write_config (struct vty *vty)
+     ^
+zebra_vty.c: In function ‘zebra_dns64_write_config’:
+zebra_vty.c:11873:9: warning: unused variable ‘ret’ [-Wunused-variable]
+     int ret = 0;
+         ^
+zebra_vty.c:11872:9: warning: unused variable ‘socketfd’ [-Wunused-variable]
+     int socketfd;
+         ^
+zebra_vty.c: In function ‘zebra_netwire_config’:
+zebra_vty.c:12015:5: warning: passing argument 2 of ‘zebra_ivi_write_config’ discards ‘const’ qualifier from pointer target type [enabled by default]
+     rc = zebra_ivi_write_config (vty, "ivi");
+     ^
+zebra_vty.c:7460:5: note: expected ‘char *’ but argument is of type ‘const char *’
+ int zebra_ivi_write_config (struct vty *vty, char *ifname)
+     ^
+zebra_vty.c: At top level:
+zebra_vty.c:12040:5: warning: no previous prototype for ‘get_hw_addr’ [-Wmissing-prototypes]
+ int get_hw_addr (u_char * buf, char *str)
+     ^
+zebra_vty.c: In function ‘get_hw_addr’:
+zebra_vty.c:12045:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (j = 0; j < strlen (str); j++)
+                   ^
+zebra_vty.c:12051:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (j = 0; j < strlen (str); j++)
+                   ^
+zebra_vty.c: In function ‘no_arp’:
+zebra_vty.c:12163:9: warning: unused variable ‘flags’ [-Wunused-variable]
+     int flags;
+         ^
+zebra_vty.c:12158:23: warning: unused variable ‘fp1’ [-Wunused-variable]
+     struct interface *fp1 = vty->index;
+                       ^
+zebra_vty.c: At top level:
+zebra_vty.c:12197:5: warning: no previous prototype for ‘static_config_ipv4_arp’ [-Wmissing-prototypes]
+ int static_config_ipv4_arp (struct vty *vty)
+     ^
+zebra_vty.c: In function ‘ip_nat_config_pool’:
+zebra_vty.c:12274:28: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_pool_entry *pLast;
+                            ^
+zebra_vty.c: In function ‘ip_nat_config_source_list’:
+zebra_vty.c:12297:29: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list *pLast;
+                             ^
+zebra_vty.c: In function ‘ip_nat_config_source_list_pool’:
+zebra_vty.c:12320:40: warning: variable ‘pLast’ set but not used [-Wunused-but-set-variable]
+     struct nat_source_list_pool_entry *pLast;
+                                        ^
+zebra_vty.c: In function ‘install_customize_route’:
+zebra_vty.c:12582:13: warning: passing argument 2 of ‘zebra_ipv4_customize’ discards ‘const’ qualifier from pointer target type [enabled by default]
+             zebra_ipv4_customize (1, "IPV4_L3FWD_LPM_1",strbuf, NULL, gateway, ifname, NULL);
+             ^
+zebra_vty.c:321:12: note: expected ‘char *’ but argument is of type ‘const char *’
+ static int zebra_ipv4_customize (int add_cmd, char *routetablename, const char *dest_str, const char *mask_str, const char *gate_str, char *ifname, const char *distance_str)
+            ^
+zebra_vty.c: At top level:
+zebra_vty.c:12628:5: warning: no previous prototype for ‘send_sdn_lladdr_msg_to_dpdk’ [-Wmissing-prototypes]
+ int send_sdn_lladdr_msg_to_dpdk(char *buf)
+     ^
+zebra_vty.c: In function ‘zebra_server_process_msg’:
+zebra_vty.c:12670:32: warning: initialization from incompatible pointer type [enabled by default]
+     struct comm_head *header = msg;
+                                ^
+zebra_vty.c:12677:9: warning: implicit declaration of function ‘handle_openflow_msg’ [-Wimplicit-function-declaration]
+         handle_openflow_msg(msg,len);
+         ^
+zebra_vty.c:12680:9: warning: implicit declaration of function ‘handle_link_status_msg’ [-Wimplicit-function-declaration]
+         handle_link_status_msg((char *)(header->data));
+         ^
+zebra_vty.c: At top level:
+zebra_vty.c:12690:5: warning: no previous prototype for ‘change_interface_link_status’ [-Wmissing-prototypes]
+ int change_interface_link_status(struct interface *ifp,uint8_t status)
+     ^
+zebra_vty.c:12704:6: warning: no previous prototype for ‘handle_link_status_msg’ [-Wmissing-prototypes]
+ void handle_link_status_msg(char *msg)
+      ^
+zebra_vty.c:12704:6: warning: conflicting types for ‘handle_link_status_msg’ [enabled by default]
+zebra_vty.c:12680:9: note: previous implicit declaration of ‘handle_link_status_msg’ was here
+         handle_link_status_msg((char *)(header->data));
+         ^
+zebra_vty.c: In function ‘handle_link_status_msg’:
+zebra_vty.c:12745:17: warning: implicit declaration of function ‘doit’ [-Wimplicit-function-declaration]
+                 speed_duplex = doit (ifname, 0, 0);
+                 ^
+zebra_vty.c:12783:17: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 2 has type ‘uint64_t’ [-Wformat=]
+                 printf("ifp->flags = %llu\n",ifp->flags);
+                 ^
+zebra_vty.c:12790:21: warning: implicit declaration of function ‘ip_address_delete_from_kernel’ [-Wimplicit-function-declaration]
+                     ip_address_delete_from_kernel (ifp);
+                     ^
+zebra_vty.c:12807:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘uint64_t’ [-Wformat=]
+                     printf("ifp->flags & IFF_UP = %d\n",ifp->flags & IFF_UP);
+                     ^
+zebra_vty.c:12808:21: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘uint64_t’ [-Wformat=]
+                     printf("ifp->flags & IFF_RUNNING = %d\n",ifp->flags & IFF_RUNNING);
+                     ^
+zebra_vty.c:12817:25: warning: implicit declaration of function ‘interface_config_recovery’ [-Wimplicit-function-declaration]
+                         interface_config_recovery (ifp);
+                         ^
+zebra_vty.c:12722:22: warning: unused variable ‘if_data’ [-Wunused-variable]
+     struct zebra_if *if_data;
+                      ^
+zebra_vty.c:12710:9: warning: unused variable ‘ifport’ [-Wunused-variable]
+     int ifport = 0;
+         ^
+zebra_vty.c: At top level:
+zebra_vty.c:12860:6: warning: no previous prototype for ‘handle_openflow_msg’ [-Wmissing-prototypes]
+ void handle_openflow_msg(char *msg,int len)
+      ^
+zebra_vty.c:12860:6: warning: conflicting types for ‘handle_openflow_msg’ [enabled by default]
+zebra_vty.c:12677:9: note: previous implicit declaration of ‘handle_openflow_msg’ was here
+         handle_openflow_msg(msg,len);
+         ^
+zebra_vty.c: In function ‘handle_openflow_msg’:
+zebra_vty.c:12867:32: warning: initialization from incompatible pointer type [enabled by default]
+     struct comm_head *header = msg;
+                                ^
+zebra_vty.c:12868:29: warning: initialization from incompatible pointer type [enabled by default]
+     struct msg_info *info = header->data;
+                             ^
+zebra_vty.c:12863:9: warning: unused variable ‘ret’ [-Wunused-variable]
+     int ret;
+         ^
+zebra_vty.c: At top level:
+zebra_vty.c:12947:6: warning: no previous prototype for ‘install_customize_route_by_file_name’ [-Wmissing-prototypes]
+ void install_customize_route_by_file_name(int argc,char **argv)
+      ^
+zebra_vty.c:12947:6: warning: conflicting types for ‘install_customize_route_by_file_name’ [enabled by default]
+zebra_vty.c:10185:5: note: previous implicit declaration of ‘install_customize_route_by_file_name’ was here
+     install_customize_route_by_file_name(argc,argv);
+     ^
+zebra_vty.c: In function ‘install_customize_route_by_file_name’:
+zebra_vty.c:12962:9: warning: unused variable ‘ret’ [-Wunused-variable]
+     int ret;
+         ^
+zebra_vty.c:12961:19: warning: unused variable ‘p’ [-Wunused-variable]
+     struct prefix p;
+                   ^
+zebra_vty.c:12960:11: warning: unused variable ‘str_fld’ [-Wunused-variable]
+     char *str_fld[_NUM_FLD];
+           ^
+zebra_vty.c:12959:9: warning: unused variable ‘i’ [-Wunused-variable]
+     int i;
+         ^
+zebra_vty.c:12958:9: warning: unused variable ‘nb_token’ [-Wunused-variable]
+     int nb_token;
+         ^
+zebra_vty.c:12957:9: warning: unused variable ‘prefixlen’ [-Wunused-variable]
+     int prefixlen;
+         ^
+zebra_vty.c:12956:11: warning: unused variable ‘fp’ [-Wunused-variable]
+     FILE *fp;
+           ^
+zebra_vty.c:12949:10: warning: unused variable ‘buf’ [-Wunused-variable]
+     char buf[256];
+          ^
+zebra_vty.c: At top level:
+zebra_vty.c:12983:6: warning: no previous prototype for ‘del_ipv6_addr_disable_policy_route’ [-Wmissing-prototypes]
+ void del_ipv6_addr_disable_policy_route(struct interface *ifp ,struct prefix_ipv6 *p)
+      ^
+zebra_vty.c: In function ‘del_ipv6_addr_disable_policy_route’:
+zebra_vty.c:13006:17: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->node.gateway,&p->prefix,p->prefixlen))
+                 ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘uint8_t (*)[16]’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:13006:17: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+                 if(!g_U8_t_DataMemcmp(&pos->node.gateway,&p->prefix,p->prefixlen))
+                 ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:13009:21: warning: passing argument 4 of ‘send_polict_based_route_to_dpdk’ from incompatible pointer type [enabled by default]
+                     send_polict_based_route_to_dpdk(NULL, NULL, &pos->node.prefix,&pos->node.gateway,pos->node.ifp,1);
+                     ^
+zebra_vty.c:4366:5: note: expected ‘struct in6_addr *’ but argument is of type ‘uint8_t (*)[16]’
+ int send_polict_based_route_to_dpdk(struct vty *vty, struct prefix *s, struct prefix *p, struct in6_addr *gate, struct interface *ifp,int type)
+     ^
+zebra_vty.c:12988:22: warning: unused variable ‘if_data’ [-Wunused-variable]
+     struct zebra_if *if_data;
+                      ^
+zebra_vty.c: At top level:
+zebra_vty.c:13017:6: warning: no previous prototype for ‘add_ipv6_addr_enable_policy_route’ [-Wmissing-prototypes]
+ void add_ipv6_addr_enable_policy_route(struct interface *ifp ,struct prefix_ipv6 *p)
+      ^
+zebra_vty.c: In function ‘add_ipv6_addr_enable_policy_route’:
+zebra_vty.c:13036:13: warning: passing argument 1 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+             if(!g_U8_t_DataMemcmp(&pos->node.gateway,&p->prefix,p->prefixlen))
+             ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘uint8_t (*)[16]’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:13036:13: warning: passing argument 2 of ‘g_U8_t_DataMemcmp’ from incompatible pointer type [enabled by default]
+             if(!g_U8_t_DataMemcmp(&pos->node.gateway,&p->prefix,p->prefixlen))
+             ^
+zebra_vty.c:9534:5: note: expected ‘u8_t *’ but argument is of type ‘struct in6_addr *’
+ int g_U8_t_DataMemcmp(u8_t  * pbySrc, u8_t  * pbyDest, u8_t byLen)
+     ^
+zebra_vty.c:13040:17: warning: passing argument 4 of ‘send_polict_based_route_to_dpdk’ from incompatible pointer type [enabled by default]
+                 send_polict_based_route_to_dpdk(NULL, NULL, &pos->node.prefix,&pos->node.gateway,pos->node.ifp,0);
+                 ^
+zebra_vty.c:4366:5: note: expected ‘struct in6_addr *’ but argument is of type ‘uint8_t (*)[16]’
+ int send_polict_based_route_to_dpdk(struct vty *vty, struct prefix *s, struct prefix *p, struct in6_addr *gate, struct interface *ifp,int type)
+     ^
+zebra_vty.c:13024:22: warning: unused variable ‘if_data’ [-Wunused-variable]
+     struct zebra_if *if_data;
+                      ^
+zebra_vty.c: At top level:
+zebra_vty.c:373:12: warning: ‘zebra_static_ipv4_customize’ defined but not used [-Wunused-function]
+ static int zebra_static_ipv4_customize (/*struct vty *vty,*/ int add_cmd, const char *dest_str, const char *mask_str, const char *gate_str, const char *flag_str, const char *distance_str)
+            ^
+zebra_vty.c:4687:12: warning: ‘static_ipv6_customize’ defined but not used [-Wunused-function]
+ static int static_ipv6_customize (/*struct vty *vty,*/ int add_cmd, const char *dest_str, const char *gate_str, const char *ifname, const char *flag_str, const char *distance_str)
+            ^
+zebra_vty.c:4825:12: warning: ‘str_to_prefix6’ defined but not used [-Wunused-function]
+ static int str_to_prefix6 (const char *str, struct ion_prefix *prefix)
+            ^
+zebra_vty.c:5153:12: warning: ‘g_dpdk_fd’ defined but not used [-Wunused-variable]
+ static int g_dpdk_fd = -1;
+            ^
+zebra_vty.c:12363:12: warning: ‘ip_flowengine_config’ defined but not used [-Wunused-function]
+ static int ip_flowengine_config (struct vty *vty)
+            ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_add_pool’:
+zebra_vty.c:679:24: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+                 system (addcmd);
+                        ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_del_pool’:
+zebra_vty.c:801:24: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+                 system (delcmd);
+                        ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_add_source_list’:
+zebra_vty.c:876:24: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+                 system (addcmd);
+                        ^
+zebra_vty.c: In function ‘ip_nat_state_change_by_del_source_list’:
+zebra_vty.c:970:24: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+                 system (delcmd);
+                        ^
+zebra_vty.c: In function ‘ip_nat_source_list_pool_add’:
+zebra_vty.c:1147:16: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+         system (addcmd);
+                ^
+zebra_vty.c: In function ‘ip_nat_source_list_pool_del’:
+zebra_vty.c:1190:16: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+         system (delcmd);
+                ^
+zebra_vty.c: In function ‘sendtoserver’:
+zebra_vty.c:2724:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+zebra_vty.c: In function ‘show_ipv6_route_table_name’:
+zebra_vty.c:8793:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+zebra_vty.c: In function ‘sectionroutecheck’:
+zebra_vty.c:9650:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+zebra_vty.c: In function ‘addsectionengine’:
+zebra_vty.c:9788:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+zebra_vty.c: In function ‘HA_resource_transfer’:
+zebra_vty.c:10633:10: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(opvbuf,sizeof(opvbuf),fpid);
+          ^
+zebra_vty.c:10639:15: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+         system("/bitway/run/dpdk_heartbeat_dir/HA_resource_transfer.sh");
+               ^
+zebra_vty.c: In function ‘access_real_ipv6_source_address’:
+zebra_vty.c:10789:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+zebra_vty.c: In function ‘no_access_real_ipv6_source_address’:
+zebra_vty.c:10829:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+zebra_vty.c: In function ‘flow_engine’:
+zebra_vty.c:11093:11: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+     system(cmd);
+           ^
+zebra_vty.c:11098:15: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+         system("umount /mnt/huge");
+               ^
+zebra_vty.c:11111:15: warning: ignoring return value of ‘system’, declared with attribute warn_unused_result [-Wunused-result]
+         system(cmd);
+               ^
+zebra_vty.c: In function ‘kill_process_by_name’:
+zebra_vty.c:11136:10: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+     fgets(buff,512,pstr);
+          ^
+zebra_vty.c: In function ‘change_interface_link_status’:
+zebra_vty.c:12701:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make[2]: *** [zebra_vty.o] Error 1
+make[2]: Leaving directory `/root/dpdk_code_install/quagga-0.99.21_check_4over6nexthop/zebra'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory `/root/dpdk_code_install/quagga-0.99.21_check_4over6nexthop'
+make: *** [all] Error 2
